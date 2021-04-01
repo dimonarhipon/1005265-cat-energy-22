@@ -4,12 +4,6 @@
   background-color: $background-color;
 }
 
-.review__wrapper {
-}
-
-.review__inner {
-}
-
 .review__heading {
   @include h2;
 }
@@ -18,14 +12,8 @@
   @include text;
 }
 
-.review__data {
-}
-
 .review__list {
   @include list;
-}
-
-.review__item {
 }
 
 .review__count {
@@ -39,5 +27,3 @@
 .review__price {
   @include text-uppercase(14px, 20px);
 }
-
-

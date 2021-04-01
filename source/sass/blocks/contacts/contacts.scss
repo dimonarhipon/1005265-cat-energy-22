@@ -2,10 +2,6 @@
   background-color: $lighten-color;
 }
 
-.contacts__wrapper {
-
-}
-
 .contacts__inner {
   padding-top: 26px;
   padding-bottom: 28px;
@@ -13,10 +9,8 @@
 
 .contacts__invite {
   @include text-uppercase(16px, 18px, #111111);
-
 }
 
 .contacts__address {
-  @include text(14px, 20px)
+  @include text(14px, 20px);
 }
-

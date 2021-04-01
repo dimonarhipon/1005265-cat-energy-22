@@ -1,4 +1,3 @@
-
 .diet {
   margin-bottom: 27px;
 }
@@ -13,14 +12,6 @@
   padding-bottom: 18px;
   background-color: $base-card;
   color: $text-color;
-
-  &--1 {
-
-  }
-
-  &--2 {
-
-  }
 }
 
 .diet__title {
@@ -34,5 +25,3 @@
 .diet__link {
   @include text-uppercase;
 }
-
-

@@ -1,11 +1,7 @@
-
 .steps {
   margin-bottom: 42px;
   background-color: $lighten-color;
   color: $darken-color;
-}
-
-.steps__wrapper {
 }
 
 .steps__heading {
@@ -16,22 +12,6 @@
   @include list;
 }
 
-.steps__item {
-  &--1 {
-
-  }
-  &--2 {
-
-  }
-  &--3 {
-
-  }
-  &--4 {
-
-  }
-}
-
 .steps__text {
   @include text;
 }
-
