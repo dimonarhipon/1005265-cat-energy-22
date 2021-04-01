@@ -1,0 +1,43 @@
+.review {
+  padding-top: 27px;
+  padding-bottom: 25px;
+  background-color: $background-color;
+}
+
+.review__wrapper {
+}
+
+.review__inner {
+}
+
+.review__heading {
+  @include h2;
+}
+
+.review__text {
+  @include text;
+}
+
+.review__data {
+}
+
+.review__list {
+  @include list;
+}
+
+.review__item {
+}
+
+.review__count {
+  @include text-uppercase(24px, 24px);
+}
+
+.review__description {
+  @include text(12px, 12px);
+}
+
+.review__price {
+  @include text-uppercase(14px, 20px);
+}
+
+

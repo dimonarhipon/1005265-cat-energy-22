@@ -1,0 +1,39 @@
+
+.intro {
+  margin-bottom: 22px;
+  background-color: $base-color;
+  background-image: url("../../../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: $lighten-color;
+}
+
+.intro__wrapper {
+
+}
+
+.intro__content {
+
+}
+
+.intro__heading {
+  @include h1($lighten-color);
+}
+
+.intro__slogan {
+  @include text-uppercase(14px, 14px, $lighten-color)
+}
+
+.intro__button {
+
+}
+
+.intro__visual {
+
+}
+
+.intro__image {
+
+}
+

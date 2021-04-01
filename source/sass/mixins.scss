@@ -1,0 +1,56 @@
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin h1($color: $darken-color) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $color;
+}
+
+@mixin h2 {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: $darken-color;
+}
+
+@mixin h3 {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $darken-color;
+}
+
+@mixin text($size: 14px, $line-height: 18px) {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size;
+  line-height: $line-height;
+  color: $text-color;
+}
+
+@mixin text-uppercase($size: 16px, $line-height: 16px, $color: $darken-color) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size;
+  line-height: $line-height;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color;
+}

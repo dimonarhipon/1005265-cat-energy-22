@@ -1,0 +1,16 @@
+
+.button {
+  width: 244px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 14px;
+  line-height: 14px;
+  // font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $lighten-color;
+  background-color: $base-color;
+}
