@@ -1,0 +1,27 @@
+.diet {
+  margin-bottom: 27px;
+}
+
+.diet__list {
+  @include list;
+}
+
+.diet__item {
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-bottom: 18px;
+  background-color: $base-card;
+  color: $text-color;
+}
+
+.diet__title {
+  @include h3;
+}
+
+.diet__text {
+  @include text;
+}
+
+.diet__link {
+  @include text-uppercase;
+}

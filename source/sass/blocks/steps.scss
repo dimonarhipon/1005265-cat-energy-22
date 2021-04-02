@@ -1,0 +1,17 @@
+.steps {
+  margin-bottom: 42px;
+  background-color: $lighten-color;
+  color: $darken-color;
+}
+
+.steps__heading {
+  @include h2;
+}
+
+.steps__list {
+  @include list;
+}
+
+.steps__text {
+  @include text;
+}
