@@ -1,0 +1,52 @@
+.questionnaire {
+  margin-bottom: 32px;
+}
+
+.questionnaire__title {
+  @include title;
+}
+
+.questionnaire__animal {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 24px;
+}
+
+.questionnaire__purpose {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 26px;
+  border: 1px solid $additional-color;
+}
+
+.questionnaire__owner {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 23px;
+}
+
+.questionnaire__message {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 23px;
+}
+
+.questionnaire__additional {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 34px;
+}
+
+.questionnaire__button {
+  margin-bottom: 21px;
+}
+
+.questionnaire__label {
+  @include text-uppercase(16px, 18px, $text-color);
+}
+
+.questionnaire__notice {
+  @include text(14px, 16px);
+
+  margin-top: 0;
+}
