@@ -1,0 +1,6 @@
+.input {
+  &::placeholder {
+    color: $text-color;
+    text-transform: uppercase;
+  }
+}
