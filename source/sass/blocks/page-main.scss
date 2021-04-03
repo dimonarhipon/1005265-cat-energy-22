@@ -1,0 +1,19 @@
+.page-main {
+  background-color: $lighten-color;
+}
+
+.page-main__wrapper {
+  margin-top: 27px;
+  margin-bottom: 39px;
+}
+
+.page-main__heading {
+  @include h1;
+
+  margin-top: 0;
+  margin-bottom: 37px;
+}
+
+.page-main__description {
+  @include text-uppercase(14px, 18px);
+}

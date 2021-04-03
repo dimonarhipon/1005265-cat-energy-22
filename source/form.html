@@ -63,13 +63,13 @@
       </h2>
 
       <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
-        <fieldset class="questionnaire__animal">
+        <fieldset class="questionnaire__animal fieldset">
           <p class="questionnaire__wrap">
             <label class="questionnaire__label" for="animal-name">
               Имя:<sup>*</sup>
             </label>
             <input
-              class="questionnaire__animal input"
+              class="questionnaire__input input"
               id="animal-name"
               name="animal-name"
               type="text"
@@ -83,7 +83,7 @@
               Вес (кг):<sup>*</sup>
             </label>
             <input
-              class="questionnaire__animal input"
+              class="questionnaire__input input"
               id="animal-weight"
               name="animal-weight"
               type="text"
@@ -97,7 +97,7 @@
               Возраст (лет):
             </label>
             <input
-              class="questionnaire__animal input"
+              class="questionnaire__input input"
               id="animal-years"
               name="animal-years"
               type="text"
@@ -106,48 +106,45 @@
           </p>
         </fieldset>
 
-        <fieldset class="questionnaire__purpose">
+        <fieldset class="questionnaire__purpose fieldset">
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label radio">
-              <input
-                class="radio__input"
-                name="radio-item"
-                value="похудение"
-                type="radio"
-              >
-              <span class="radio__point"></span>
-              Похудение
-            </label>
+            <input
+              class="radio__input"
+              id="reducing"
+              name="radio-item"
+              value="похудение"
+              type="radio"
+            >
+            <span class="radio__point"></span>
+            <label class="questionnaire__label radio" for="reducing">Похудение</label>
           </p>
 
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label radio">
-              <input
-                class="radio__input"
-                name="radio-item"
-                value="Набор массы"
-                type="radio"
-              >
-              <span class="radio__point"></span>
-              Набор массы
-            </label>
+            <input
+              class="radio__input"
+              id="mass"
+              name="radio-item"
+              value="Набор массы"
+              type="radio"
+            >
+            <span class="radio__point"></span>
+            <label class="questionnaire__label radio" for="mass">Набор массы</label>
           </p>
 
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label radio">
-              <input
-                class="radio__input"
-                name="radio-item"
-                value="Не знаю (Нужен ваш совет)"
-                type="radio"
-              >
-              <span class="radio__point"></span>
-              Не знаю (Нужен ваш совет)
-            </label>
+            <input
+              class="radio__input"
+              id="advice"
+              name="radio-item"
+              value="Не знаю (Нужен ваш совет)"
+              type="radio"
+            >
+            <span class="radio__point"></span>
+            <label class="questionnaire__label radio" for="advice">Не знаю (Нужен ваш совет)</label>
           </p>
         </fieldset>
 
-        <fieldset class="questionnaire__owner">
+        <fieldset class="questionnaire__owner fieldset">
           <legend class="questionnaire__title">
             Контактные данные (владельца кота)
           </legend>
@@ -157,7 +154,7 @@
               E-mail:<sup>*</sup>
             </label>
             <input
-              class="questionnaire__owner input"
+              class="questionnaire__input input"
               id="owner-name"
               name="owner-name"
               type="email"
@@ -172,18 +169,18 @@
               Телефон<sup>*</sup>
             </label>
             <input
-              class="questionnaire__owner input"
+              class="questionnaire__input input"
               id="owner-phone"
               name="owner-phone"
               type="tel"
               placeholder="8 (960) 900-60-90"
               required
             >
-            <span class="input-icon input-icon--phone" ></span>
+            <span class="input-icon input-icon--phone"></span>
           </p>
         </fieldset>
 
-        <fieldset class="questionnaire__message">
+        <fieldset class="questionnaire__message fieldset">
           <legend class="questionnaire__title">
             Комментарий
           </legend>
@@ -203,60 +200,59 @@
           </p>
         </fieldset>
 
-        <fieldset class="questionnaire__additional">
+        <fieldset class="questionnaire__additional fieldset">
           <legend class="questionnaire__title">
             Дополнительно
           </legend>
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label checkbox">
-              <input
-                class="checkbox__input"
-                name="checkbox-item"
-                value="сахарозаменитель"
-                type="checkbox"
-              >
-              <span class="checkbox__point"></span>
-              сахарозаменитель
-            </label>
+            <input
+              class="checkbox__input"
+              id="sweetener"
+              name="checkbox-item"
+              value="сахарозаменитель"
+              type="checkbox"
+            >
+            <span class="checkbox__point"></span>
+            <label class="questionnaire__label checkbox" for="sweetener">сахарозаменитель</label>
           </p>
 
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label checkbox">
-              <input
-                class="checkbox__input"
-                name="checkbox-item"
-                value="питьевая вода"
-                type="checkbox"
-              >
-              <span class="checkbox__point"></span>
-              питьевая вода
-            </label>
+            <input
+              class="checkbox__input"
+              id="water"
+              name="checkbox-item"
+              value="питьевая вода"
+              type="checkbox"
+            >
+            <span class="checkbox__point"></span>
+
+            <label class="questionnaire__label checkbox" for="water">питьевая вода </label>
           </p>
 
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label checkbox">
-              <input
-                class="checkbox__input"
-                name="checkbox-item"
-                value="молоко"
-                type="checkbox"
-              >
-              <span class="checkbox__point"></span>
-              молоко
-            </label>
+            <input
+              class="checkbox__input"
+              id="milk"
+              name="checkbox-item"
+              value="молоко"
+              type="checkbox"
+            >
+            <span class="checkbox__point"></span>
+
+            <label class="questionnaire__label checkbox" for="milk">молоко</label>
           </p>
 
           <p class="questionnaire__wrap">
-            <label class="questionnaire__label checkbox">
-              <input
-                class="checkbox__input"
-                name="checkbox-item"
-                value="витамины"
-                type="checkbox"
-              >
-              <span class="checkbox__point"></span>
-              витамины
-            </label>
+            <input
+              class="checkbox__input"
+              id="vitamins"
+              name="checkbox-item"
+              value="витамины"
+              type="checkbox"
+            >
+            <span class="checkbox__point"></span>
+
+            <label class="questionnaire__label checkbox" for="vitamins">витамины</label>
           </p>
 
         </fieldset>
@@ -271,7 +267,7 @@
       </form>
     </section>
 
-    <section class="contacts">
+    <section class="contacts contacts--gray">
       <h2 class="visually-hidden">
         Адрес компании <span lang="en">Cat energy</span>
       </h2>
@@ -288,7 +284,7 @@
       </div>
 
       <div class="map">
-        <h3 class="map__title">
+        <h3 class="map__title visually-hidden">
           Расположение компании на карте
         </h3>
       </div>

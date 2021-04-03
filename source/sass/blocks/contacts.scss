@@ -1,5 +1,9 @@
 .contacts {
   background-color: $lighten-color;
+
+  &--gray {
+    background-color: $base-card;
+  }
 }
 
 .contacts__inner {
