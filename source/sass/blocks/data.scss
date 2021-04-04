@@ -1,0 +1,7 @@
+.data__cell {
+  @include text(12px, 16px);
+
+  &--addition {
+    @include text(14px, 14px);
+  }
+}

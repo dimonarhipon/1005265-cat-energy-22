@@ -1,0 +1,56 @@
+.addition {
+  margin-bottom: 35px;
+}
+
+.addition__content {
+  @include list;
+
+  margin-bottom: 39px;
+}
+
+.addition__card {
+  padding-top: 13px;
+  padding-bottom: 18px;
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.addition__heading {
+  @include title;
+
+  margin-bottom: 36px;
+  line-height: 24px;
+}
+
+.addition__title {
+  margin-top: 0;
+}
+
+.addition__name {
+  @include text-uppercase(16px, 16px, $darken-2-color);
+
+  text-decoration: none;
+}
+
+.addition__visual {
+  height: 289px;
+  width: 280px;
+  box-sizing: border-box;
+
+  padding: 58px;
+  padding-bottom: 43px;
+
+  background-color: $base-color;
+  background-image: url("../../img/addition-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.addition__text {
+  @include text(16px, 20px, $lighten-color);
+
+  text-align: center;
+}

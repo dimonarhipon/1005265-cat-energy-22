@@ -15,3 +15,8 @@
 .intro__slogan {
   @include text-uppercase(14px, 14px, $lighten-color);
 }
+
+.intro__button {
+  font-size: 14px;
+  line-height: 18px;
+}

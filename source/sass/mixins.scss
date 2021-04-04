@@ -34,13 +34,13 @@
   color: $darken-color;
 }
 
-@mixin text($size: 14px, $line-height: 18px) {
+@mixin text($size: 14px, $line-height: 18px, $color: $text-color) {
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: $size;
   line-height: $line-height;
-  color: $text-color;
+  color: $color;
 }
 
 @mixin text-uppercase($size: 16px, $line-height: 16px, $color: $darken-color) {
