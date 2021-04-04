@@ -1,4 +1,6 @@
 .input {
+  color: $text-color;
+
   &::placeholder {
     color: $text-color;
     text-transform: uppercase;

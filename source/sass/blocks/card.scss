@@ -1,0 +1,41 @@
+.card {
+  padding-top: 19px;
+  padding-bottom: 25px;
+  border-top: 1px solid #ebebeb;
+
+  &:last-child {
+    border-bottom: 1px solid #ebebeb;
+  }
+}
+
+.card__title {
+  @include text-uppercase(16px, 20px, #111111);
+
+  margin-top: 0;
+
+  &--load {
+    margin-bottom: 8px;
+  }
+}
+
+.card__name {
+  @include text-uppercase(16px, 20px, $darken-2-color);
+
+  text-decoration: none;
+}
+
+.card__description {
+  @include text(12px, 16px);
+
+  &--load {
+    margin-top: 0;
+    margin-bottom: 21px;
+  }
+}
+
+.card__button {
+  &--all {
+    color: $text-color;
+    background-color: $base-card;
+  }
+}
