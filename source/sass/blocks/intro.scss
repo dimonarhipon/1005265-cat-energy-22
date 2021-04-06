@@ -1,22 +1,55 @@
 .intro {
-  margin-bottom: 22px;
+  height: 309px;
+  box-sizing: border-box;
+  padding-top: 27px;
+  margin-bottom: 200px;
+
   background-color: $base-color;
   background-image: url("../../../img/intro-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   color: $lighten-color;
+
+  @media (min-width: $tablet) {
+    background-image: none;
+    background-color: $lighten-color;
+  }
+}
+
+.intro__wrapper {
+  @include container;
+
+  position: relative;
 }
 
 .intro__heading {
   @include h1($lighten-color);
+
+  margin-top: 0;
+
+  @media (min-width: $tablet) {
+    color: $darken-color;
+  }
 }
 
 .intro__slogan {
   @include text-uppercase(14px, 14px, $lighten-color);
+
+  @media (min-width: $tablet) {
+    color: $darken-color;
+  }
 }
 
 .intro__button {
+  position: relative;
+  width: 100%;
+  top: 282px;
   font-size: 14px;
   line-height: 18px;
+}
+
+.intro__visual {
+  position: absolute;
+  top: 147px;
 }

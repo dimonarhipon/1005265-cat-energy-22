@@ -4,12 +4,34 @@
   color: $darken-color;
 }
 
+.steps__wrapper {
+  @include container;
+}
+
 .steps__heading {
   @include h2;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
 }
 
 .steps__list {
   @include list;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: auto auto;
+    grid-row-gap: 37px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 250px);
+    grid-column-gap: 70px;
+    grid-row-gap: 0;
+  }
 }
 
 .steps__text {
