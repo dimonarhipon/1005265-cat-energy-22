@@ -6,15 +6,32 @@
   }
 }
 
+.contacts__wrapper {
+  @include container;
+}
+
 .contacts__inner {
+  display: flex;
+  justify-content: space-between;
+
   padding-top: 26px;
   padding-bottom: 28px;
 }
 
 .contacts__invite {
   @include text-uppercase(16px, 18px, #111111);
+
+  width: 140px;
+  margin: 0;
+  text-align: left;
 }
 
 .contacts__address {
   @include text(14px, 20px);
+
+  width: 140px;
+
+  @media (min-width: $tablet) {
+    text-align: right;
+  }
 }

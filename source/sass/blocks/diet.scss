@@ -1,9 +1,18 @@
 .diet {
   margin-bottom: 27px;
+
+
+  @media (min-width: $desktop) {
+    @include container;
+  }
 }
 
 .diet__list {
   @include list;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .diet__item {
@@ -12,6 +21,13 @@
   padding-bottom: 18px;
   background-color: $base-card;
   color: $text-color;
+
+  @media (min-width: $tablet) {
+    padding-top: 77px;
+    padding-right: 62px;
+    padding-bottom: 53px;
+    padding-left: 52px;
+  }
 }
 
 .diet__title {
@@ -20,6 +36,10 @@
 
 .diet__text {
   @include text;
+
+  @media (min-width: $tablet) {
+    max-width: 342px;
+  }
 }
 
 .diet__link {
