@@ -3,6 +3,8 @@
 }
 
 .page-main__wrapper {
+  @include container;
+
   margin-top: 27px;
   margin-bottom: 39px;
 }
@@ -13,6 +15,8 @@
   margin-top: 27px;
   margin-bottom: 37px;
 
+  text-align: left;
+
   &--catalog {
     margin-bottom: 41px;
   }
@@ -20,4 +24,11 @@
 
 .page-main__description {
   @include text-uppercase(14px, 18px);
+
+  margin-top: 0;
+  text-align: left;
+
+  @media (min-width: $tablet) {
+    max-width: 323px;
+  }
 }
