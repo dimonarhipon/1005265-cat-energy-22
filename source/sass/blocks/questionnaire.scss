@@ -1,15 +1,53 @@
 .questionnaire {
+  @include container;
+
   margin-bottom: 32px;
+}
+
+.questionnaire__form {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 37px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column-gap: 80px;
+  }
 }
 
 .questionnaire__title {
   @include title;
+
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    &--additional {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--owner {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .questionnaire__animal {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+  }
 }
 
 .questionnaire__purpose {
@@ -17,30 +55,72 @@
   margin-right: 0;
   margin-bottom: 26px;
   border: 1px solid $additional-color;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+  }
 }
 
 .questionnaire__owner {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
 }
 
 .questionnaire__message {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / -1;
+  }
 }
 
 .questionnaire__additional {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 37px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 104px;
+  }
 }
 
 .questionnaire__button {
   margin-bottom: 21px;
+
+  width: 100%;
+
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .questionnaire__label {
@@ -55,4 +135,11 @@
   @include text(14px, 16px);
 
   margin-top: 0;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    align-self: center;
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
