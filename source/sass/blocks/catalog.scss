@@ -1,3 +1,27 @@
+.catalog {
+  @media (min-width: $tablet) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 75px;
+  }
+}
+
 .catalog__list {
   @include list;
+  @include container;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 60px;
+  }
 }

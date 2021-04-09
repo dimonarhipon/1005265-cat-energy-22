@@ -6,6 +6,23 @@
   &:last-child {
     border-bottom: 1px solid #ebebeb;
   }
+
+  @media (min-width: $tablet) {
+    width: 324px;
+    min-height: 511px;
+    background-color: $base-card;
+
+
+    &:last-child {
+      border: 1px solid #ebebeb;
+      background-color: $lighten-color;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    min-height: 511px;
+  }
 }
 
 .card__title {
@@ -34,8 +51,20 @@
 }
 
 .card__button {
+  width: 100%;
+  padding: 10px 26px;
+
   &--all {
     color: $text-color;
     background-color: $base-card;
+  }
+
+  @media (min-width: $tablet) {
+    width: 248px;
+    padding: 9.5px 26px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 10px 26px;
   }
 }

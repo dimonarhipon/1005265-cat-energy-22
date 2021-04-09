@@ -1,5 +1,9 @@
 .site-navigation {
   @include list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .site-navigation__link {
@@ -11,4 +15,8 @@
   border-top: 1px solid #e6e6e6;
   font-weight: 500;
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
 }

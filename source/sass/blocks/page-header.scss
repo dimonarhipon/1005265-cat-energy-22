@@ -3,6 +3,28 @@
   border-bottom: 1px solid #e6e6e6;
   background-color: $lighten-color;
   color: $darken-color;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 64px;
+    padding-top: 25px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 74px;
+    padding-top: 54px;
+  }
+}
+
+.page-header__wrapper {
+  @media (min-width: $tablet) {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-header__logo {
@@ -14,7 +36,7 @@
   padding-bottom: 16px;
 
   @media (min-width: $tablet) {
-    padding-top: 12px;
-    padding-bottom: 16px;
+    margin: 0;
+    padding: 0;
   }
 }
