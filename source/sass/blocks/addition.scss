@@ -41,6 +41,16 @@
   }
 
   @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 23px auto;
+    grid-row-gap: 23px;
+
+    padding-top: 25px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 28px;
+    box-sizing: border-box;
     border: 1px solid #cdcdcd;
   }
 
@@ -69,6 +79,11 @@
 
 .addition__title {
   margin-top: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .addition__name {
@@ -97,8 +112,11 @@
   }
 
   @media (min-width: $desktop) {
+    display: flex;
     width: 280px;
     min-height: 289px;
+    padding: 42px;
+    box-sizing: border-box;
     background-image: url("../../img/addition-bg.jpg");
   }
 }
@@ -107,6 +125,21 @@
   @include text(16px, 20px, $lighten-color);
 
   text-align: center;
+
+  @media (min-width: $tablet) {
+    max-width: 165px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: 66px;
+  }
+
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 .addition__button {
@@ -114,11 +147,13 @@
   padding: 10px 26px;
 
   @media (min-width: $tablet) {
+    grid-column: 1 / -1;
     padding: 6px 26px;
   }
 
   @media (min-width: $desktop) {
     width: 244px;
     padding: 7px 26px;
+    line-height: 26px;
   }
 }
