@@ -18,7 +18,13 @@
   text-align: left;
 
   &--catalog {
+    @include container;
+
     margin-bottom: 41px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 83px;
+    }
   }
 }
 

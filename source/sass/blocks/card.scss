@@ -1,4 +1,8 @@
 .card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   padding-top: 19px;
   padding-bottom: 25px;
   border-top: 1px solid #ebebeb;
@@ -6,15 +10,83 @@
   &:last-child {
     border-bottom: 1px solid #ebebeb;
   }
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+
+    width: 324px;
+    min-height: 511px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    background-color: $base-card;
+
+    &:last-child {
+      border: 1px solid #ebebeb;
+      background-color: $lighten-color;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    min-height: 511px;
+  }
+}
+
+.card__visual {
+  width: 50%;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.card__picture {
+  display: flex;
+  height: 100%;
+}
+
+.card__image {
+  margin-top: 14px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--big {
+    margin-top: 11px;
+  }
+}
+
+.card__content {
+  width: 50%;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .card__title {
   @include text-uppercase(16px, 20px, #111111);
 
+  max-width: 80px;
   margin-top: 0;
+  text-align: left;
 
   &--load {
+    max-width: 230px;
     margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -30,12 +102,34 @@
   &--load {
     margin-top: 0;
     margin-bottom: 21px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
 .card__button {
+  width: 100%;
+  padding: 10px 26px;
+
   &--all {
     color: $text-color;
     background-color: $base-card;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 9.5px 26px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 10px 26px;
+  }
+}
+
+.card__wrap {
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    padding-top: 161px;
   }
 }

@@ -7,4 +7,8 @@
 .development__name {
   @include text(16px, 18px);
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    margin-right: 22px;
+  }
 }

@@ -47,6 +47,10 @@
   top: 282px;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet) {
+    padding: 14px 26px;
+  }
 }
 
 .intro__visual {
