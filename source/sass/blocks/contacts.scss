@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   background-color: $lighten-color;
 
   &--gray {
@@ -16,6 +17,24 @@
 
   padding-top: 26px;
   padding-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    padding-top: 62px;
+    padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 95px;
+    width: 570px;
+    padding-top: 62px;
+    padding-left: 76px;
+    padding-right: 89px;
+    padding-bottom: 51px;
+    box-sizing: border-box;
+
+    background-color: $lighten-color;
+  }
 }
 
 .contacts__invite {
@@ -24,6 +43,10 @@
   width: 140px;
   margin: 0;
   text-align: left;
+
+  @media (min-width: $tablet) {
+    line-height: 21px;
+  }
 }
 
 .contacts__address {
@@ -32,6 +55,7 @@
   width: 140px;
 
   @media (min-width: $tablet) {
+    width: 159px;
     text-align: right;
   }
 }

@@ -8,4 +8,8 @@
   @media (min-width: $tablet) {
     min-height: 400px;
   }
+
+  @media (min-width: $desktop) {
+    background-image: url("../../../img/map-bg-desktop.jpg");
+  }
 }

@@ -1,3 +1,42 @@
 .menu {
   display: block;
 }
+
+.menu__control {
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu--closed .menu__control {
+  top: 18px;
+  right: 18px;
+}
+
+.menu__close {
+  width: 18px;
+  height: 18px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.menu__open {
+  display: none;
+  width: 24px;
+  height: 16px;
+
+  &.active {
+    display: block;
+  }
+}

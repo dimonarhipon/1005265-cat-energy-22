@@ -1,3 +1,70 @@
+.slider {
+  @media (min-width: $desktop) {
+    position: relative;
+    bottom: 45px;
+  }
+}
+
+.slider__item {
+  display: flex;
+
+  &--2 {
+    display: none;
+  }
+}
+
+.slider__image {
+  margin: auto;
+
+  @media (min-width: $tablet) {
+    width: 708px;
+    height: 620px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 636px;
+    height: 536px;
+  }
+}
+
+.slider__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .slider__button {
   @include text-uppercase(16px, 20px);
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet) {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  }
+
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $darken-color;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    border-color: transparent;
+  }
 }

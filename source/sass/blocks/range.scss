@@ -1,3 +1,11 @@
 .range {
   display: block;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: $lighten-color;
+
+  @media (min-width: $tablet) {
+    width: 428px;
+  }
 }

@@ -1,3 +1,15 @@
 .company-name {
   display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: all 0.3s linear;
+  }
 }

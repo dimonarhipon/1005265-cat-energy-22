@@ -2,7 +2,7 @@
   width: 244px;
   box-sizing: border-box;
   display: inline-block;
-  padding: 7px 26px;
+  padding: 10px 26px;
   border: none;
   font-size: 16px;
   line-height: 20px;
@@ -13,4 +13,18 @@
   text-transform: uppercase;
   color: $lighten-color;
   background-color: $base-color;
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background-color: $base-color-darken;
+    transition: all 0.3s linear;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $base-color-darken;
+    color: $lighten-color-3;
+    transition: all 0.3s linear;
+  }
 }

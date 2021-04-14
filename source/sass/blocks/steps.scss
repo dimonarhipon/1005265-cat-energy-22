@@ -2,6 +2,16 @@
   margin-bottom: 42px;
   background-color: $lighten-color;
   color: $darken-color;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 58px;
+    border-bottom: none;
+  }
 }
 
 .steps__wrapper {
@@ -11,8 +21,15 @@
 .steps__heading {
   @include h2;
 
+  margin-bottom: 40px;
+  text-align: left;
+
   @media (min-width: $tablet) {
-    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 51px;
   }
 }
 
@@ -30,10 +47,25 @@
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 250px);
     grid-column-gap: 70px;
-    grid-row-gap: 0;
+    grid-row-gap: 11px;
+  }
+}
+
+.steps__item {
+  @media (min-width: $tablet) {
+    min-height: 280px;
+    padding-top: 151px;
+    box-sizing: border-box;
   }
 }
 
 .steps__text {
   @include text;
+
+  margin-top: 0;
+  margin-left: 80px;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+  }
 }
