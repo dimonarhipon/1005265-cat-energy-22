@@ -110,7 +110,6 @@
 
 .card__button {
   width: 100%;
-  padding: 10px 26px;
 
   &--all {
     color: $text-color;
@@ -121,7 +120,7 @@
     padding: 9.5px 26px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     padding: 10px 26px;
   }
 }

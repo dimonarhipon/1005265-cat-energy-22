@@ -1,9 +1,10 @@
 .diet {
+  @include container;
+
   margin-bottom: 27px;
 
-
-  @media (min-width: $desktop) {
-    @include container;
+  @media (min-width: $tablet) {
+    margin-bottom: 45px;
   }
 }
 
@@ -12,36 +13,206 @@
 
   @media (min-width: $desktop) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .diet__item {
+  position: relative;
   margin-bottom: 20px;
   padding: 20px;
   padding-bottom: 18px;
   background-color: $base-card;
   color: $text-color;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--1::before {
+    width: 50px;
+    height: 53px;
+    background-image: url("../../img/icon-cat-1-small.svg");
+  }
+
+  &--2::before {
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../../img/icon-cat-2-small.svg");
+  }
+
   @media (min-width: $tablet) {
+    box-sizing: border-box;
     padding-top: 77px;
-    padding-right: 62px;
-    padding-bottom: 53px;
+    padding-right: 52px;
+    padding-bottom: 52px;
     padding-left: 52px;
+
+
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 62px;
+    }
+
+    &--1::before {
+      width: 200px;
+      height: 211px;
+      background-image: url("../../img/icon-cat-1-big.svg");
+    }
+
+    &--2::before {
+      top: 91px;
+      right: 28px;
+      width: 268px;
+      height: 200px;
+      background-image: url("../../img/icon-cat-2-big.svg");
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 570px;
+
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &::before {
+      top: 41px;
+      right: auto;
+      left: 52px;
+    }
+
+    &--1::before {
+      width: 100px;
+      height: 106px;
+      background-image: url("../../img/icon-cat-1-middle.svg");
+    }
+
+    &--2::before {
+      top: 47px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+      background-image: url("../../img/icon-cat-2-middle.svg");
+    }
   }
 }
 
 .diet__title {
   @include h3;
+
+  margin-top: 10px;
+  margin-bottom: 29px;
+  margin-left: 72px;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .diet__text {
   @include text;
 
+  margin-bottom: 23px;
+
   @media (min-width: $tablet) {
     max-width: 342px;
+    color: $darken-color;
+
+    &--1 {
+      max-width: 377px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
+
+    &--1 {
+      max-width: 100%;
+    }
   }
 }
 
 .diet__link {
   @include text-uppercase;
+
+  position: relative;
+  display: block;
+  max-width: 134px;
+  padding-top: 15px;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.7s linear;
+
+  &:hover {
+    text-decoration: none;
+    transition: all 0.7s linear;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: all 0.7s linear;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: calc(100vw - 80px);
+    height: 1px;
+    background-color: $additional-color;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    right: 0;
+    width: 32px;
+    height: 10px;
+    background-image: url("../../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover::before {
+    background-image: url("../../img/icon-arrow-long.svg");
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 165px;
+    margin-top: 52px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      top: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 168px;
+  }
 }

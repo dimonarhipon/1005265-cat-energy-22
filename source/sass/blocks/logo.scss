@@ -2,6 +2,18 @@
   display: flex;
   align-items: center;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: all 0.3s linear;
+  }
+
   @media (min-width: $tablet) {
     max-width: 174px;
   }
