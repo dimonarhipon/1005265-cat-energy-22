@@ -4,7 +4,7 @@
   padding-top: 27px;
   margin-bottom: 200px;
 
-  background-color: #63a63c;
+  background-color: $base-color-darken-2;
   background-image: url("../../../img/intro-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +25,7 @@
     margin-bottom: 82px;
 
     background-image: url("../../../img/intro-bg-desktop.jpg"),
-      linear-gradient(to right, $lighten-color 50%, #63a63c 50%, #63a63c 100%);
+      linear-gradient(to right, $lighten-color 50%, $base-color-darken-2 50%, $base-color-darken-2 100%);
 
     background-repeat: no-repeat;
     background-position: top 10px right, center;

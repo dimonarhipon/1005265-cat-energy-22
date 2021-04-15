@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 47px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $grey-2;
   }
 
   @media (min-width: $desktop) {
@@ -52,10 +52,86 @@
 }
 
 .steps__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+    background-color: $base-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--1::before {
+    background-image: url("../../img/icon-leaf.svg");
+  }
+
+  &--2::before {
+    background-position: top 13px center;
+    background-image: url("../../img/icon-tub.svg");
+  }
+
+  &--3::before {
+    background-image: url("../../img/icon-eat.svg");
+  }
+
+  &--4::before {
+    background-image: url("../../img/icon-alarm.svg");
+  }
+
   @media (min-width: $tablet) {
     min-height: 280px;
     padding-top: 151px;
     box-sizing: border-box;
+
+    &::before {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--2::before {
+      background-position: center center;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 134px;
+      height: 280px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 280px;
+      line-height: 280px;
+      text-align: center;
+      color: $base-card;
+    }
+
+    &--1::after {
+      content: "1";
+      width: 112px;
+    }
+
+    &--2::after {
+      content: "2";
+    }
+
+    &--3::after {
+      content: "3";
+    }
+
+    &--4::after {
+      content: "4";
+      width: 136px;
+    }
   }
 }
 
@@ -63,9 +139,12 @@
   @include text;
 
   margin-top: 0;
+  margin-bottom: 26px;
   margin-left: 80px;
 
   @media (min-width: $tablet) {
+    position: absolute;
     margin-left: 0;
+    z-index: 1;
   }
 }

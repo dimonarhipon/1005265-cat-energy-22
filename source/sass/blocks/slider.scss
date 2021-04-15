@@ -44,6 +44,7 @@
   margin-right: 10px;
   border: none;
   background-color: transparent;
+  transition: all 0.7s linear;
 
   @media (min-width: $tablet) {
     border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
@@ -62,9 +63,11 @@
   &:focus {
     cursor: pointer;
     border-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.7s linear;
   }
 
   &:active {
     border-color: transparent;
+    transition: all 0.7s linear;
   }
 }

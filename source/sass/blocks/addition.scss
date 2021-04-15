@@ -34,10 +34,10 @@
 .addition__card {
   padding-top: 13px;
   padding-bottom: 18px;
-  border-top: 1px solid #cdcdcd;
+  border-top: 1px solid $grey;
 
   &:last-child {
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid $grey;
   }
 
   @media (min-width: $tablet) {
@@ -51,7 +51,7 @@
     padding-right: 38px;
     padding-bottom: 28px;
     box-sizing: border-box;
-    border: 1px solid #cdcdcd;
+    border: 1px solid $grey;
   }
 
   @media (min-width: $desktop) {
