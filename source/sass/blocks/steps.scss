@@ -4,12 +4,14 @@
   color: $darken-color;
 
   @media (min-width: $tablet) {
-    margin-bottom: 47px;
+    margin-bottom: 43px;
+    padding-bottom: 47px;
     border-bottom: 1px solid $grey-2;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 58px;
+    padding-bottom: 0;
     border-bottom: none;
   }
 }
@@ -40,8 +42,9 @@
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: auto auto;
+    grid-column-gap: 153px;
     grid-row-gap: 37px;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   @media (min-width: $desktop) {
@@ -53,6 +56,8 @@
 
 .steps__item {
   position: relative;
+  min-height: 60px;
+  margin-bottom: 20px;
 
   &::before {
     position: absolute;
@@ -86,6 +91,7 @@
 
   @media (min-width: $tablet) {
     min-height: 280px;
+    margin-bottom: 0;
     padding-top: 151px;
     box-sizing: border-box;
 
@@ -139,7 +145,6 @@
   @include text;
 
   margin-top: 0;
-  margin-bottom: 26px;
   margin-left: 80px;
 
   @media (min-width: $tablet) {

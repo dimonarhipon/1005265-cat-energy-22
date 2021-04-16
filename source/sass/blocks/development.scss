@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.development__image {
+  object-fit: cover;
+}
+
 .development__name {
   @include text(16px, 18px);
   text-decoration: none;

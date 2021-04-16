@@ -22,16 +22,16 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
   }
 }
 
 .page-header__logo {
   position: relative;
-  padding: 0 20px;
   max-width: 190px;
   margin-top: 12px;
   margin-bottom: 16px;
+  padding: 0 20px;
 
   @media (min-width: $tablet) {
     margin: 0;
@@ -40,7 +40,5 @@
 }
 
 .page-header__menu {
-  @media (min-width: $tablet) {
-    margin-top: 8px;
-  }
+  margin-bottom: 3px;
 }

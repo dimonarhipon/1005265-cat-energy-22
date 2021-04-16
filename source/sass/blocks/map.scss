@@ -5,11 +5,23 @@
   background-position: center;
   background-size: 100%;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map-bg@2x.jpg");
+  }
+
   @media (min-width: $tablet) {
     min-height: 400px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-bg-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop) {
     background-image: url("../../../img/map-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map-bg-desktop@2x.jpg");
+    }
   }
 }

@@ -27,4 +27,9 @@
     color: $lighten-color-3;
     transition: all 0.7s linear;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
