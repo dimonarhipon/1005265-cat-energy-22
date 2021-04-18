@@ -1,8 +1,47 @@
 .input {
+  @include text-uppercase;
+
+  flex-grow: 1;
+  padding: 13px 15px;
+  border: 1px solid $grey-3;
   color: $text-color;
+  line-height: 18px;
+  text-align: left;
 
   &::placeholder {
     color: $text-color;
     text-transform: uppercase;
+  }
+
+  &:hover {
+    border-color: $grey;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    padding: 12px 14px;
+    border: 2px solid $text-color;
+  }
+
+  &--error {
+    padding: 12px 14px;
+    border: 2px solid $error;
+    transition: all 0.3s linear;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:focus,
+    &:active {
+      padding: 9px 18px;
+    }
   }
 }

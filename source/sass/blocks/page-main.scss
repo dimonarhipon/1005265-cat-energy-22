@@ -7,6 +7,20 @@
 
   margin-top: 27px;
   margin-bottom: 39px;
+
+  &--form {
+    @media (min-width: $tablet) {
+      margin-left: 39px;
+      margin-right: 35px;
+
+      margin-bottom: 66px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .page-main__heading {
@@ -26,6 +40,18 @@
       margin-bottom: 83px;
     }
   }
+
+  &--form {
+    max-width: 700px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 56px;
+    }
+  }
 }
 
 .page-main__description {
@@ -36,5 +62,9 @@
 
   @media (min-width: $tablet) {
     max-width: 323px;
+  }
+
+  &--form {
+    line-height: 30px;
   }
 }

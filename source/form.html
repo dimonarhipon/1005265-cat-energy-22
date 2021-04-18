@@ -13,46 +13,57 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo logo" href="./index.html">
-        <picture class="logo__group">
-          <img class="logo__image logo__image--mobile" src="./img/logo-mobile.svg" width="34" height="38" alt="Логотип компании">
+        <picture>
+          <source class="logo__image" media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" type="image/svg+xml">
+          <source class="logo__image" media="(min-width: 768px)" srcset="./img/logo-tablet.svg" type="image/svg+xml">
+          <img class="logo__image" src="./img/logo-mobile.svg" width="34" height="38" alt="Логотип компании">
         </picture>
 
-        <img class="logo__name company-name" src="./img/company-name.svg" width="101" height="18" alt="Кэт энерджи">
+        <img class="logo__name company-name company-name--mobile" src="./img/company-name.svg" width="101" height="18" alt="Кэт энерджи">
       </a>
 
-      <div class="page-header__menu menu">
-        <nav class="menu__navigation site-navigation">
+      <div class="page-header__menu menu menu--closed menu--nojs">
+        <button class="menu__control" type="button" aria-label="Открыть меню">
+          <svg class="menu__close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5"/>
+            <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5"/>
+          </svg>
+          <svg class="menu__open" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5"/>
+            <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5"/>
+            <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <nav class="menu__navigation site-navigatio">
           <ul class="site-navigation">
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="./index.html">
+            <li class="site-navigation__item" href="./index.html">
+              <a class="site-navigation__link site-navigation__link--dark-color">
                 Главная
               </a>
             </li>
             <li class="site-navigation__item">
-              <a class="site-navigation__link" href="./catalog.html">
+              <a class="site-navigation__link site-navigation__link--dark-color" href="./catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="site-navigation__item site-navigation__item--current">
-              <a class="site-navigation__link">
+            <li class="site-navigation__item site-navigation__item--current site-navigation__item--darken-color">
+              <a class="site-navigation__link site-navigation__link--dark-color">
                 Подбор программы
               </a>
             </li>
           </ul>
         </nav>
-
-        <button class="menu__control" type="button" aria-label="Открыть меню"></button>
       </div>
     </div>
 
   </header>
 
   <main class="page-main">
-    <div class="page-main__wrapper">
-      <h1 class="page-main__heading">
+    <div class="page-main__wrapper page-main__wrapper--form">
+      <h1 class="page-main__heading page-main__heading--form">
         Подбор программы
       </h1>
-      <p class="page-main__description">
+      <p class="page-main__description page-main__description--form">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
     </div>
@@ -108,40 +119,49 @@
         </fieldset>
 
         <fieldset class="questionnaire__purpose fieldset">
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--purpose radio">
             <input
-              class="radio__input"
+              class="radio__input visually-hidden"
               id="reducing"
               name="radio-item"
               value="похудение"
               type="radio"
             >
-            <span class="radio__point"></span>
-            <label class="questionnaire__label radio" for="reducing">Похудение</label>
+
+            <label class="questionnaire__label radio__name" for="reducing">
+              <span class="radio__point"></span>
+              Похудение
+            </label>
           </p>
 
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--purpose radio">
             <input
-              class="radio__input"
+              class="radio__input visually-hidden"
               id="mass"
               name="radio-item"
               value="Набор массы"
               type="radio"
             >
-            <span class="radio__point"></span>
-            <label class="questionnaire__label radio" for="mass">Набор массы</label>
+
+            <label class="questionnaire__label radio__name" for="mass">
+              <span class="radio__point"></span>
+              Набор массы
+            </label>
           </p>
 
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--purpose radio">
             <input
-              class="radio__input"
+              class="radio__input visually-hidden"
               id="advice"
               name="radio-item"
               value="Не знаю (Нужен ваш совет)"
               type="radio"
             >
-            <span class="radio__point"></span>
-            <label class="questionnaire__label radio" for="advice">Не знаю (Нужен ваш совет)</label>
+
+            <label class="questionnaire__label radio__name" for="advice">
+              <span class="radio__point"></span>
+              Не знаю (Нужен ваш совет)
+            </label>
           </p>
         </fieldset>
 
@@ -182,12 +202,12 @@
         </fieldset>
 
         <fieldset class="questionnaire__message fieldset">
-          <legend class="questionnaire__title">
+          <legend class="questionnaire__title questionnaire__title--message">
             Комментарий
           </legend>
 
           <p class="questionnaire__box">
-            <label class="questionnaire__label" for="animal-description">
+            <label class="questionnaire__label questionnaire__label--message" for="animal-description">
               <span class="visually-hidden">
                 Описание питомца
               </span>
@@ -205,55 +225,64 @@
           <legend class="questionnaire__title questionnaire__title--additional">
             Дополнительно
           </legend>
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--additional checkbox">
             <input
-              class="checkbox__input"
+              class="checkbox__input visually-hidden"
               id="sweetener"
               name="checkbox-item"
               value="сахарозаменитель"
               type="checkbox"
             >
-            <span class="checkbox__point"></span>
-            <label class="questionnaire__label checkbox" for="sweetener">сахарозаменитель</label>
+
+            <label class="questionnaire__label checkbox__name" for="sweetener">
+              <span class="checkbox__point"></span>
+              сахарозаменитель
+            </label>
           </p>
 
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--additional checkbox">
             <input
-              class="checkbox__input"
+              class="checkbox__input visually-hidden"
               id="water"
               name="checkbox-item"
               value="питьевая вода"
               type="checkbox"
             >
-            <span class="checkbox__point"></span>
 
-            <label class="questionnaire__label checkbox" for="water">питьевая вода </label>
+            <label class="questionnaire__label checkbox__name" for="water">
+              <span class="checkbox__point"></span>
+              питьевая вода
+            </label>
           </p>
 
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--additional checkbox">
             <input
-              class="checkbox__input"
+              class="checkbox__input visually-hidden"
               id="milk"
               name="checkbox-item"
               value="молоко"
               type="checkbox"
             >
-            <span class="checkbox__point"></span>
 
-            <label class="questionnaire__label checkbox" for="milk">молоко</label>
+            <label class="questionnaire__label checkbox__name" for="milk">
+              <span class="checkbox__point"></span>
+              молоко
+            </label>
           </p>
 
-          <p class="questionnaire__wrap">
+          <p class="questionnaire__wrap questionnaire__wrap--additional checkbox">
             <input
-              class="checkbox__input"
+              class="checkbox__input visually-hidden"
               id="vitamins"
               name="checkbox-item"
               value="витамины"
               type="checkbox"
             >
-            <span class="checkbox__point"></span>
 
-            <label class="questionnaire__label checkbox" for="vitamins">витамины</label>
+            <label class="questionnaire__label checkbox__name" for="vitamins">
+              <span class="checkbox__point"></span>
+              витамины
+            </label>
           </p>
 
         </fieldset>
@@ -273,7 +302,7 @@
         Адрес компании <span lang="en">Cat energy</span>
       </h2>
 
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--form">
         <div class="contacts__inner">
           <p class="contacts__invite">
             приглашаем к сотрудничеству дилеров!

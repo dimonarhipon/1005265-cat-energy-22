@@ -1,10 +1,25 @@
 .questionnaire {
-  @include container;
-
   margin-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    @include container;
+
+    margin-left: 39px;
+    margin-right: 35px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 82px;
+  }
 }
 
 .questionnaire__form {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,34 +34,119 @@
 .questionnaire__title {
   @include title;
 
+  position: relative;
+  display: block;
+  width: 100%;
   margin-bottom: 35px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: -20px;
+    height: 2px;
+    background-color: $base-color;
+  }
+
+  &--owner::before {
+    top: 17px;
+    width: calc(100vw - 221px);
+  }
+
+  &--message::before {
+    width: calc(100vw - 162px);
+  }
+
+  &--additional::before {
+    width: calc(100vw - 184px);
+  }
+
   @media (min-width: $tablet) {
+    margin-bottom: 76px;
+
     &--additional {
       grid-column: 1 / -1;
-      margin-bottom: 0;
+      margin-bottom: 17px;
+    }
+
+    &::before {
+      right: -85px;
+    }
+
+    &--owner::before {
+      top: 16px;
+      width: calc(100vw - 619px);
+    }
+
+    &--message::before {
+      width: calc(100vw - 288px);
+    }
+
+    &--additional::before {
+      width: calc(100vw - 322px);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: -89px;
+      right: 0;
+      top: 15px;
+      width: 30px;
+      height: 2px;
+      background-color: $base-color;
     }
   }
 
   @media (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 36px;
+
     &--owner {
       grid-column: 1 / -1;
       margin-bottom: 0;
+    }
+
+    &::before {
+      top: 22px;
+      right: -110px;
+    }
+
+    &--owner::before {
+      width: calc(100vw - 662px);
+    }
+
+    &--message::before {
+      width: calc(100vw - 332px);
+    }
+
+    &--additional::before {
+      width: calc(100vw - 362px);
+    }
+
+    &::after {
+      top: 22px;
+      left: -110px;
+      width: 70px;
     }
   }
 }
 
 .questionnaire__animal {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 24px;
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop) {
     grid-column: 1 / 2;
+    margin-bottom: 69px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -54,10 +154,19 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 26px;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  padding-right: 23px;
   border: 1px solid $additional-color;
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
+    margin-bottom: 71px;
+    padding-top: 25px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 29px;
   }
 
   @media (min-width: $desktop) {
@@ -66,8 +175,8 @@
 }
 
 .questionnaire__owner {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 23px;
 
   @media (min-width: $tablet) {
@@ -77,24 +186,38 @@
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 37px;
     grid-column-gap: 80px;
+    margin-bottom: 49px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 .questionnaire__message {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 23px;
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 67px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.questionnaire__box {
+  margin: 0;
 }
 
 .questionnaire__additional {
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 34px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
@@ -107,12 +230,93 @@
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 104px;
+    margin-bottom: 29px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.questionnaire__wrap {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  &--purpose {
+    margin-bottom: 24px;
+  }
+
+  &--additional {
+    margin-bottom: 24px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--purpose {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.questionnaire__label {
+  @include text-uppercase(16px, 18px, $text-color);
+
+  margin-right: 12px;
+  text-align: left;
+
+  &--message {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.questionnaire__textaria {
+  @include text-uppercase;
+
+  min-width: 280px;
+  min-height: 150px;
+  width: 100%;
+  max-height: 800px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  padding: 15px 9px;
+  border: 1px solid $grey-3;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: $tablet) {
+    line-height: 30px;
+    padding: 10px 19px;
   }
 }
 
 .questionnaire__button {
-  width: 100%;
+  width: calc(100% - 40px);
+
   margin-bottom: 21px;
+  margin-left: auto;
+  margin-right: auto;
 
   font-size: 16px;
   line-height: 20px;
@@ -120,20 +324,21 @@
   @media (min-width: $tablet) {
     margin-bottom: 0;
   }
-}
 
-.questionnaire__label {
-  @include text-uppercase(16px, 18px, $text-color);
-}
-
-.questionnaire__textaria {
-  text-transform: uppercase;
+  @media (min-width: $desktop) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .questionnaire__notice {
   @include text(14px, 16px);
 
+  width: calc(100% - 40px);
   margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 
   @media (min-width: $tablet) {

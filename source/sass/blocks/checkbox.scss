@@ -1,3 +1,33 @@
 .checkbox {
+  position: relative;
   color: $darken-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}
+
+.checkbox__name {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.checkbox__point {
+  width: 40px;
+  height: 40px;
+  border: 1px solid $grey;
+  margin-right: 19px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.checkbox__input:checked + .checkbox__name .checkbox__point {
+  border-color: $base-color;
+  background-color: $base-color;
+  cursor: pointer;
 }
