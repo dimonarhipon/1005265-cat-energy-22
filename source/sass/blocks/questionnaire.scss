@@ -50,7 +50,7 @@
 
   margin-bottom: 35px;
   padding-right: 20px;
-  background-color: #fff;
+  background-color: $lighten-color;
   z-index: 1;
 
   &::before {
@@ -58,7 +58,7 @@
     content: "";
     top: 15px;
     right: -20px;
-    left: 0px;
+    left: 0;
     height: 2px;
     z-index: -1;
     width: calc(100vw - 20px);
@@ -230,7 +230,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 104px;
     margin-bottom: 29px;
-
   }
 }
 
