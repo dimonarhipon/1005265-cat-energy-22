@@ -22,6 +22,15 @@
     outline: none;
   }
 
+  &:focus + .input__icon line,
+  &:focus + .input__icon path {
+    stroke: $base-color;
+  }
+
+  &:focus + .input__icon--phone g path {
+    fill: $base-color;
+  }
+
   &:focus,
   &:active {
     padding: 12px 14px;
@@ -32,6 +41,11 @@
     padding: 12px 14px;
     border: 2px solid $error;
     transition: all 0.3s linear;
+
+    .input__icon--email line,
+    .input__icon--email path {
+      stroke: $error;
+    }
   }
 
   @media (min-width: $tablet) {
@@ -44,4 +58,9 @@
       padding: 9px 18px;
     }
   }
+}
+
+.input__icon {
+  position: absolute;
+  right: 20px;
 }

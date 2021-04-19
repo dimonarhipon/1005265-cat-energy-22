@@ -17,6 +17,7 @@
 }
 
 .radio__point {
+  position: relative;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -27,7 +28,15 @@
   cursor: pointer;
 }
 
-.radio__input:checked + .radio__name .radio__point {
+.radio__input:checked + .radio__name .radio__point::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   border-color: $base-color;
   background-color: $base-color;
   cursor: pointer;
