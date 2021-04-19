@@ -1,3 +1,50 @@
 .checkbox {
+  position: relative;
   color: $darken-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}
+
+.checkbox__name {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.checkbox__point {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $grey;
+  margin-right: 19px;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.7s linear;
+}
+
+.checkbox__input:checked + .checkbox__name .checkbox__point::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-color: $base-color;
+  background-image: url("../../img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.7s linear;
 }

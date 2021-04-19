@@ -1,4 +1,9 @@
 .fieldset {
   border: none;
   padding: 0;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

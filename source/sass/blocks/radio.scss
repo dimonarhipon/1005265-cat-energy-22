@@ -1,3 +1,43 @@
 .radio {
   color: $darken-2-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+}
+
+.radio__name {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.radio__point {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid $grey;
+  margin-right: 19px;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.radio__input:checked + .radio__name .radio__point::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-color: $base-color;
+  background-color: $base-color;
+  cursor: pointer;
 }

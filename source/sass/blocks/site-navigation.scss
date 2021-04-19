@@ -25,6 +25,10 @@
     &--current {
       border-color: $lighten-color;
     }
+
+    &--darken-color {
+      border-color: $base-color;
+    }
   }
 }
 
@@ -60,5 +64,10 @@
 
   @media (min-width: $desktop) {
     color: $lighten-color;
+
+
+    &--dark-color {
+      color: $darken-3-color;
+    }
   }
 }

@@ -9,6 +9,13 @@
 
 .contacts__wrapper {
   @include container;
+
+  @media (min-width: $tablet) {
+    &--form {
+      margin-left: 39px;
+      margin-right: 35px;
+    }
+  }
 }
 
 .contacts__inner {
