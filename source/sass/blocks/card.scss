@@ -5,10 +5,36 @@
 
   padding-top: 19px;
   padding-bottom: 25px;
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid $grey-5;
 
   &:last-child {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid $grey-5;
+  }
+
+  &--load {
+    position: relative;
+    padding-top: 78px;
+  }
+
+  &--load::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background-color: $grey-4;
+  }
+
+  &--load::after {
+    position: absolute;
+    content: "";
+    top: 39px;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    transform: translateX(-48%);
+    background-color: $grey-4;
   }
 
   @media (min-width: $tablet) {
@@ -24,8 +50,18 @@
     background-color: $base-card;
 
     &:last-child {
-      border: 1px solid #ebebeb;
+      border: 1px solid $grey-5;
       background-color: $lighten-color;
+    }
+
+    &--load::before {
+      top: 52px;
+      height: 60px;
+    }
+
+    &--load::after {
+      top: 80px;
+      width: 60px;
     }
   }
 
@@ -83,7 +119,7 @@
   }
 
   @media (min-width: $tablet) {
-    max-width: 175px;
+    max-width: 150px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -94,6 +130,15 @@
   @include text-uppercase(16px, 20px, $darken-2-color);
 
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    line-height: 21px;
+  }
 }
 
 .card__description {
@@ -114,6 +159,22 @@
   &--all {
     color: $text-color;
     background-color: $base-card;
+
+    &:hover {
+      background-color: $grey-5;
+    }
+
+    &:focus {
+      color: $text-color;
+      opacity: 0.3;
+      background-color: $grey-5;
+    }
+
+    &:active {
+      color: $text-color;
+      opacity: 0.3;
+      background-color: $grey-5;
+    }
   }
 
   @media (min-width: $tablet) {

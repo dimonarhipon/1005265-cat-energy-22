@@ -1,4 +1,4 @@
-.site-navigation {
+.site-navigation__list {
   @include list;
 
   @media (min-width: $tablet) {
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $desktop) {
-    &--current {
+    &--white {
       border-color: $lighten-color;
     }
 

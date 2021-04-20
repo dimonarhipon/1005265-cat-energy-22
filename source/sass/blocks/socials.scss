@@ -1,3 +1,53 @@
 .socials {
   @include list;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 34px;
+  }
+}
+
+.socials__link {
+  width: 23px;
+  height: 23px;
+  display: flex;
+}
+
+.socials__icon {
+  margin: auto;
+
+  &:hover path {
+    fill: $base-color;
+  }
+
+  &:active path {
+    opacity: 0.6;
+    fill: $base-color;
+  }
+
+  &--facebook {
+    &:hover path {
+      fill: none;
+      stroke: $base-color;
+    }
+
+    &:active path {
+      opacity: 0.6;
+      fill: none;
+      stroke: $base-color;
+    }
+  }
 }
