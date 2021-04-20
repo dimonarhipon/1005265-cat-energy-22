@@ -30,6 +30,7 @@
   &--catalog {
     @include container;
 
+    margin-top: 27px;
     margin-bottom: 41px;
 
     @media (min-width: $tablet) {

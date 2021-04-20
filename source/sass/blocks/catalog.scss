@@ -10,13 +10,14 @@
 
 .catalog__list {
   @include list;
-  @include container;
 
   @media (min-width: $tablet) {
+    @include container;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
     grid-row-gap: 59px;
+    justify-items: center;
   }
 
   @media (min-width: $desktop) {
@@ -24,4 +25,9 @@
     grid-column-gap: 80px;
     grid-row-gap: 60px;
   }
+}
+
+.catalog__item {
+  padding-left: 20px;
+  padding-right: 20px;
 }

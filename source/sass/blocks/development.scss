@@ -15,4 +15,28 @@
   @media (min-width: $tablet) {
     margin-right: 22px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.development__logo {
+  width: 27px;
+  height: 34px;
+}
+
+.development__icon {
+  & path {
+    fill: $text-color-2;
+  }
+
+  &:hover path {
+    fill: $base-color;
+  }
+
+  &:active path {
+    opacity: 0.3;
+    fill: $base-color;
+  }
 }

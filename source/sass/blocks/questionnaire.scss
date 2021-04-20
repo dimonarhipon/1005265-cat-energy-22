@@ -72,6 +72,8 @@
   @media (min-width: $tablet) {
     margin-bottom: 76px;
     padding-right: 42px;
+    font-size: 36px;
+    line-height: 36px;
 
     &--additional {
       grid-column: 1 / -1;
@@ -85,6 +87,7 @@
     &::before {
       right: -20px;
       left: 0;
+      width: calc(100vw - 60px);
     }
 
     &--owner::before {
@@ -96,7 +99,7 @@
       content: "";
       left: -69px;
       right: 0;
-      top: 15px;
+      top: 22px;
       width: 30px;
       height: 2px;
       background-color: $base-color;
@@ -187,6 +190,10 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
     margin-bottom: 79px;
+
+    & .questionnaire__wrap {
+      margin-bottom: 0;
+    }
   }
 }
 
