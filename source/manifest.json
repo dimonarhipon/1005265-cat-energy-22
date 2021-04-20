@@ -1,0 +1,15 @@
+{
+  "name": "Кет Энерджи",
+  "icons": [{
+    "src": "./img/16.svg",
+    "sizes": "16x16"
+  }, {
+    "src": "./img/32.svg",
+    "sizes": "32x32"
+  }, {
+    "src": "./img/152.svg",
+    "sizes": "152x152"
+  }],
+  "display": "fullscreen",
+  "orientation": "landscape"
+}
