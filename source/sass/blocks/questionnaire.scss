@@ -118,13 +118,13 @@
     &::before {
       top: 22px;
       right: -110px;
-      width: calc(100vw - 110px);
+      width: calc((100vw - 1220px) / 2 + 1220px);
     }
 
     &::after {
       top: 22px;
-      left: -110px;
-      width: 70px;
+      left: calc(((100vw - 1220px) / 2 + 110px) * -1);
+      width: calc((100vw - 1220px) / 2 + 70px);
     }
   }
 }
@@ -290,7 +290,6 @@
   }
 
   @media (min-width: $tablet) {
-    font-size: 20px;
     line-height: 30px;
   }
 }
