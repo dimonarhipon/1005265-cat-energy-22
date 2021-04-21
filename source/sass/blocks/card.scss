@@ -42,7 +42,7 @@
     align-items: center;
 
     width: 324px;
-    min-height: 511px;
+    min-height: 430px;
     padding-left: 36px;
     padding-right: 36px;
     padding-bottom: 40px;
@@ -67,11 +67,11 @@
 
   @media (min-width: $desktop) {
     width: 245px;
-    min-height: 511px;
   }
 }
 
 .card__visual {
+  position: relative;
   width: 50%;
 
   @media (min-width: $tablet) {
@@ -92,11 +92,28 @@
   &--big {
     margin-top: 11px;
   }
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: -63px;
+    left: 50%;
+    width: 161px;
+    height: 174px;
+    margin-top: 0;
+    transform: translateX(-50%);
+
+    &--big {
+      width: 168px;
+      height: 200px;
+      top: -90px;
+    }
+  }
 }
 
 .card__content {
   width: 50%;
-  margin-bottom: 13px;
+  margin-top: auto;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet) {
     width: 100%;

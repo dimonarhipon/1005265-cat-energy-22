@@ -139,17 +139,14 @@
 
     &::before {
       top: 22px;
-      width: calc(100vw - 110px);
+      right: -110px;
+      width: calc((100vw - 1220px) / 2 + 1220px);
     }
 
     &::after {
-      position: absolute;
-      content: "";
-      left: -110px;
+      left: calc(((100vw - 1220px) / 2 + 110px) * -1);
       right: 0;
-      top: 22px;
-      width: 70px;
-      height: 2px;
+      width: calc((100vw - 1220px) / 2 + 70px);
       background-color: $base-color;
     }
   }
@@ -187,6 +184,10 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/addition-bg@2x.jpg");
+  }
+
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
@@ -196,6 +197,10 @@
     padding-left: 78px;
     background-image: url("../../img/addition-bg-tablet.jpg");
     background-size: 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/addition-bg-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop) {
@@ -206,8 +211,12 @@
     padding: 41px;
     box-sizing: border-box;
     background-image: url("../../img/addition-bg.jpg");
-    background-position: 0 left;
+    background-position: left 0;
     background-size: 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/addition-bg@2x.jpg");
+    }
   }
 }
 

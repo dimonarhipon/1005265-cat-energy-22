@@ -16,14 +16,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 59px;
+    grid-row-gap: 140px;
     justify-items: center;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 80px;
-    grid-row-gap: 60px;
+    grid-row-gap: 143px;
   }
 }
 

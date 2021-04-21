@@ -32,20 +32,24 @@
 
     margin-top: 27px;
     margin-bottom: 41px;
-
-    @media (min-width: $tablet) {
-      margin-bottom: 83px;
-    }
   }
 
   &--form {
     max-width: 700px;
+  }
 
-    @media (min-width: $tablet) {
-      margin-bottom: 54px;
+  @media (min-width: $tablet) {
+    &--catalog {
+      margin-bottom: 146px;
     }
 
-    @media (min-width: $desktop) {
+    &--form {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--form {
       margin-bottom: 56px;
     }
   }
