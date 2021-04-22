@@ -36,12 +36,11 @@
   &::-webkit-slider-thumb::before {
     position: absolute;
     content: "";
-
     top: 12px;
     left: 12px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #68b738
+    background-color: $base-color;
   }
 }
