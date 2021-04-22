@@ -26,6 +26,16 @@
   }
 }
 
+.page-header__picture {
+  width: 34px;
+  height: 38px;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    height: auto;
+  }
+}
+
 .page-header__logo {
   position: relative;
   max-width: 190px;
@@ -40,5 +50,7 @@
 }
 
 .page-header__menu {
-  margin-bottom: 3px;
+  @media (max-width: $desktop) {
+    margin-bottom: 7px;
+  }
 }

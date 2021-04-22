@@ -27,16 +27,13 @@
 }
 
 .development__icon {
-  & path {
-    fill: $text-color-2;
+  color: $text-color-2;
+
+  &:hover {
+    color: $base-color;
   }
 
-  &:hover path {
-    fill: $base-color;
-  }
-
-  &:active path {
+  &:active {
     opacity: 0.3;
-    fill: $base-color;
   }
 }

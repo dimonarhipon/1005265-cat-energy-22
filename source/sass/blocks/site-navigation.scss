@@ -9,7 +9,7 @@
 .site-navigation__item {
   @media (min-width: $tablet) {
     position: relative;
-    margin-right: 33px;
+    margin-right: 36px;
 
     &--current {
       padding-bottom: 10px;
@@ -29,6 +29,10 @@
     &--darken-color {
       border-color: $base-color;
     }
+
+    &--current {
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -36,7 +40,7 @@
   @include text-uppercase(20px, 20px);
 
   display: block;
-  padding-top: 22px;
+  padding-top: 21px;
   padding-bottom: 24px;
   border-top: 1px solid $grey-2;
   font-weight: 500;
@@ -63,8 +67,9 @@
   }
 
   @media (min-width: $desktop) {
-    color: $lighten-color;
+    @include text-uppercase(20px, 30px);
 
+    color: $lighten-color;
 
     &--dark-color {
       color: $darken-3-color;

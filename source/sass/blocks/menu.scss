@@ -1,5 +1,10 @@
 .menu {
   display: block;
+
+  &--closed .menu__control {
+    top: 19px;
+    right: 19px;
+  }
 }
 
 .menu__control {
@@ -15,11 +20,6 @@
   @media (min-width: 768px) {
     display: none;
   }
-}
-
-.menu--closed .menu__control {
-  top: 18px;
-  right: 18px;
 }
 
 .menu__close {

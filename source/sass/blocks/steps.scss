@@ -1,5 +1,5 @@
 .steps {
-  margin-bottom: 42px;
+  margin-bottom: 39px;
   background-color: $lighten-color;
   color: $darken-color;
 
@@ -27,11 +27,12 @@
   text-align: left;
 
   @media (min-width: $tablet) {
+    margin-top: 0;
     margin-bottom: 32px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 51px;
+    margin-top: 0;
   }
 }
 
@@ -42,14 +43,14 @@
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: auto auto;
-    grid-column-gap: 153px;
+    grid-column-gap: 134px;
     grid-row-gap: 37px;
-    justify-content: center;
+    // justify-content: center;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 250px);
-    grid-column-gap: 70px;
+    grid-column-gap: 75px;
     grid-row-gap: 11px;
   }
 }
@@ -62,7 +63,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: -3px;
     left: 0;
 
     width: 60px;
@@ -124,14 +125,17 @@
     &--1::after {
       content: "1";
       width: 112px;
+      right: 20px;
     }
 
     &--2::after {
       content: "2";
+      right: 5px;
     }
 
     &--3::after {
       content: "3";
+      right: 3px;
     }
 
     &--4::after {

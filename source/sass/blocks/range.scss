@@ -1,5 +1,6 @@
 .range {
   display: block;
+  width: 84px;
   border: 1px solid $grey;
   border-radius: 6px;
   box-sizing: border-box;
@@ -7,5 +8,40 @@
 
   @media (min-width: $tablet) {
     width: 428px;
+    margin-left: 20px;
+    margin-right: 21px;
+  }
+}
+
+.range__input {
+  display: block;
+  appearance: none;
+  width: 428px;
+  height: 6px;
+  background-color: $grey-6;
+  outline: 0;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    position: relative;
+    appearance: none;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $grey;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: $lighten-color;
+  }
+
+  &::-webkit-slider-thumb::before {
+    position: absolute;
+    content: "";
+
+    top: 12px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #68b738
   }
 }

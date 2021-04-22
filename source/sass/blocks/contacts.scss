@@ -11,10 +11,8 @@
   @include container;
 
   @media (min-width: $tablet) {
-    &--form {
-      margin-left: 39px;
-      margin-right: 35px;
-    }
+    margin-left: 40px;
+    margin-right: 42px;
   }
 }
 
@@ -26,18 +24,19 @@
   padding-bottom: 28px;
 
   @media (min-width: $tablet) {
-    padding-top: 62px;
-    padding-bottom: 51px;
+    padding-top: 61px;
+    padding-bottom: 57px;
   }
 
   @media (min-width: $desktop) {
     position: absolute;
     top: 95px;
+    left: 110px;
     width: 570px;
     padding-top: 62px;
     padding-left: 76px;
-    padding-right: 89px;
-    padding-bottom: 51px;
+    padding-right: 85px;
+    padding-bottom: 57px;
     box-sizing: border-box;
 
     background-color: $lighten-color;
@@ -45,14 +44,18 @@
 }
 
 .contacts__invite {
-  @include text-uppercase(16px, 18px, #111111);
+  @include text-uppercase(16px, 21px, $darken-3-color);
 
-  width: 140px;
+  max-width: 140px;
   margin: 0;
+  margin-top: 5px;
   text-align: left;
 
   @media (min-width: $tablet) {
-    line-height: 21px;
+    @include text-uppercase(20px, 25px);
+
+    max-width: 171px;
+    text-align: left;
   }
 }
 
@@ -62,7 +65,18 @@
   width: 140px;
 
   @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
     width: 159px;
+    line-height: 22px;
     text-align: right;
   }
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
+}
+
+.contacts__city {
+  margin-top: 17px;
 }
