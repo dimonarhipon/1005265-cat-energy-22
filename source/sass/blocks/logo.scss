@@ -1,7 +1,6 @@
 .logo {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   &:hover,
   &:focus {
@@ -34,5 +33,13 @@
   @media (min-width: $desktop) {
     width: 202px;
     height: 59px;
+  }
+}
+
+.logo__company-name {
+  margin-top: 12px;
+
+  @media (min-width: $tablet) {
+    display: none;
   }
 }

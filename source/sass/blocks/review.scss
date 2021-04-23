@@ -5,20 +5,22 @@
 
   @media (min-width: $tablet) {
     padding-top: 0;
-    padding-bottom: 33px;
+    padding-bottom: 61px;
     background-color: $lighten-color;
-    background-image: linear-gradient($lighten-color 0%, $lighten-color 55.5%, $background-color 55.5%, $background-color 100%);
+    background-image: linear-gradient($lighten-color 0%, $lighten-color 55%, $background-color 55%, $background-color 100%);
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 0;
+    padding-bottom: 15px;
     background-color: $background-color;
     background-image: linear-gradient($lighten-color 0%, $lighten-color 22.7%, $background-color 22.7%, $background-color 100%);
   }
 }
 
 .review__wrapper {
-  @include container;
+  @media (min-width: $tablet) {
+    @include container;
+  }
 
   @media (min-width: $desktop) {
     display: flex;
@@ -27,12 +29,17 @@
 }
 
 .review__inner {
+  padding: 0 20px;
+  margin-bottom: 42px;
+
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
 
-    margin-bottom: 59px;
+    margin-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: $desktop) {
@@ -68,10 +75,13 @@
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
+    max-width: 700px;
     margin-bottom: 54px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop) {
+    max-width: 435px;
     margin-bottom: 69px;
   }
 }
@@ -81,7 +91,7 @@
 
   display: flex;
   align-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet) {
     justify-content: flex-start;
@@ -89,7 +99,7 @@
 
   @media (min-width: $desktop) {
     grid-column: 1 / -1;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 
@@ -114,8 +124,8 @@
   @media (min-width: $tablet) {
     width: 162px;
     margin-right: 42px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 18px;
   }
 
   @media (min-width: $desktop) {
@@ -126,13 +136,17 @@
 
 .review__count {
   @include text-uppercase(24px, 24px);
+
+  @media (min-width: $tablet) {
+    @include text-uppercase(30px, 37px);
+  }
 }
 
 .review__description {
   @include text(12px, 12px);
 
   position: absolute;
-  bottom: -17px;
+  bottom: -14px;
   max-width: 77px;
   margin-top: 9px;
   margin-bottom: 0;
@@ -164,7 +178,7 @@
 
     justify-self: end;
     max-width: 175px;
-    margin-top: 9px;
+    margin-top: 10px;
 
     text-align: right;
   }
@@ -178,8 +192,12 @@
 }
 
 .review__price {
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     display: inline-block;
-    margin-left: 63px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 59px;
   }
 }

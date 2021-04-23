@@ -5,18 +5,35 @@
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
 
 
   @media (min-width: $tablet) {
+    margin-left: 27px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 51px;
   }
 }
 
 .socials__item {
   &:not(:last-child) {
-    margin-right: 34px;
+    margin-right: 31px;
+  }
+
+  @media (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
   }
 }
 
@@ -24,30 +41,47 @@
   width: 23px;
   height: 23px;
   display: flex;
+
+  @media (min-width: $tablet) {
+    &--vkontakte {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--facebook {
+      width: 28px;
+      height: 33px;
+    }
+  }
 }
 
 .socials__icon {
   margin: auto;
+  color: $text-color-2;
 
-  &:hover path {
-    fill: $base-color;
+  &:hover {
+    color: $base-color;
   }
 
-  &:active path {
+  &:active {
     opacity: 0.6;
-    fill: $base-color;
+    color: $base-color;
   }
 
-  &--facebook {
-    &:hover path {
-      fill: none;
-      stroke: $base-color;
+  @media (min-width: $tablet) {
+    &--vkontakte {
+      width: 30px;
+      height: 22px;
     }
 
-    &:active path {
-      opacity: 0.6;
-      fill: none;
-      stroke: $base-color;
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 28px;
+      height: 33px;
     }
   }
 }
