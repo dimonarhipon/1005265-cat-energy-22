@@ -4,7 +4,7 @@
   color: $darken-color;
 
   @media (min-width: $tablet) {
-    margin-bottom: 64px;
+    margin-bottom: 62px;
     padding-top: 25px;
     padding-bottom: 0;
     border-bottom: none;
@@ -50,7 +50,9 @@
 }
 
 .page-header__menu {
-  @media (max-width: $desktop) {
-    margin-bottom: 7px;
+  margin-bottom: 0;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 9px;
   }
 }

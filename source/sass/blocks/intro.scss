@@ -52,6 +52,10 @@
     position: absolute;
     z-index: 2;
     max-width: 414px;
+    margin-left: 87px;
+  }
+
+  @media (min-width: $desktop) {
     margin-left: 80px;
   }
 }
@@ -91,7 +95,7 @@
 .intro__button {
   position: relative;
   width: 100%;
-  top: 288px;
+  top: 287px;
   padding: 11px 26px;
   margin-bottom: 22px;
   font-size: 14px;

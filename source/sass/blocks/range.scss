@@ -1,46 +1,71 @@
 .range {
+  position: relative;
   display: block;
-  width: 84px;
+  max-width: 84px;
+  width: 100%;
+  height: 14px;
   border: 1px solid $grey;
-  border-radius: 6px;
+  border-radius: 50px;
   box-sizing: border-box;
   background-color: $lighten-color;
 
+  &::after {
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 50%;
+    right: 5px;
+    width: 35px;
+    height: 6px;
+    border-radius: 50px;
+    background-color: $base-color;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
   @media (min-width: $tablet) {
-    width: 428px;
+    max-width: 428px;
+    height: 6px;
     margin-left: 20px;
     margin-right: 21px;
+    background-color: $grey-6;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.range__pin {
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $grey-6;
+  background-color: $lighten-color;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  transition: 0.3s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: $base-color;
   }
 }
 
 .range__input {
-  display: block;
+  display: none;
   appearance: none;
-  width: 428px;
-  height: 6px;
-  background-color: $grey-6;
-  outline: 0;
-  cursor: pointer;
-
-  &::-webkit-slider-thumb {
-    position: relative;
-    appearance: none;
-    width: 34px;
-    height: 34px;
-    border: 1px solid $grey;
-    border-radius: 50%;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
-    background-color: $lighten-color;
-  }
-
-  &::-webkit-slider-thumb::before {
-    position: absolute;
-    content: "";
-    top: 12px;
-    left: 12px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: $base-color;
-  }
 }

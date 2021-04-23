@@ -25,7 +25,9 @@
   }
 
   @media (min-width: $tablet) {
-    margin-right: 22px;
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
   }
 
   @media (min-width: $desktop) {

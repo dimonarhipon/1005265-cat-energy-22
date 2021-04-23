@@ -22,6 +22,8 @@
   }
 
   @media (min-width: $desktop) {
+    margin-right: 34px;
+
     &--white {
       border-color: $lighten-color;
     }

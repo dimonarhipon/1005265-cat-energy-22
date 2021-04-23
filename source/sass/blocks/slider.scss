@@ -7,10 +7,18 @@
 
 .slider__item {
   display: flex;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   &--2 {
     display: none;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 28px;
   }
 }
 
@@ -22,8 +30,8 @@
   margin: auto;
 
   @media (min-width: $tablet) {
-    width: 708px;
-    height: 552px;
+    width: 677px;
+    height: 504px;
   }
 
   @media (min-width: $desktop) {

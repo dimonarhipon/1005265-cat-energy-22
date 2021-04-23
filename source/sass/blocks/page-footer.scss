@@ -4,7 +4,7 @@
   background-color: $base-card;
 
   @media (min-width: $tablet) {
-    padding-top: 54px;
+    padding-top: 53px;
     padding-bottom: 61px;
   }
 
@@ -25,12 +25,17 @@
 }
 
 .page-footer__company-name {
+  display: block;
   margin-bottom: 29px;
   text-align: center;
 
   @media (min-width: $tablet) {
     margin-top: 5px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
   }
 }
 

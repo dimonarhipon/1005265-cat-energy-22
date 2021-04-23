@@ -7,7 +7,7 @@
     padding-top: 0;
     padding-bottom: 61px;
     background-color: $lighten-color;
-    background-image: linear-gradient($lighten-color 0%, $lighten-color 57%, $background-color 57%, $background-color 100%);
+    background-image: linear-gradient($lighten-color 0%, $lighten-color 55%, $background-color 55%, $background-color 100%);
   }
 
   @media (min-width: $desktop) {
@@ -30,14 +30,14 @@
 
 .review__inner {
   padding: 0 20px;
-  margin-bottom: 61px;
+  margin-bottom: 42px;
 
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
 
-    margin-bottom: 8px;
+    margin-bottom: 70px;
     padding-left: 0;
     padding-right: 0;
   }
