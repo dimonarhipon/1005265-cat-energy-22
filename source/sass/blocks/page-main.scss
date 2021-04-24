@@ -5,16 +5,23 @@
   margin-bottom: 39px;
 
   &--form {
-    @media (min-width: $tablet) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $tablet) {
+    &--form {
       margin-left: 39px;
       margin-right: 35px;
 
       margin-bottom: 66px;
     }
+  }
 
-    @media (min-width: $desktop) {
+  @media (min-width: $desktop) {
+    &--form {
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 64px;
     }
   }
 }
@@ -61,11 +68,14 @@
   margin-top: 0;
   text-align: left;
 
-  @media (min-width: $tablet) {
-    max-width: 323px;
+  &--form {
+    max-width: 250px;
   }
 
-  &--form {
-    line-height: 30px;
+  @media (min-width: $tablet) {
+    @include text-uppercase(20px, 30px);
+
+    max-width: 323px;
+    text-align: left;
   }
 }

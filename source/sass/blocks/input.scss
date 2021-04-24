@@ -22,13 +22,12 @@
     outline: none;
   }
 
-  &:focus + .input__icon line,
-  &:focus + .input__icon path {
+  &:focus + .input__icon--email {
     stroke: $base-color;
   }
 
-  &:focus + .input__icon--phone g path {
-    fill: $base-color;
+  &:focus + .input__icon--phone {
+    color: $base-color;
   }
 
   &:focus,
@@ -42,9 +41,12 @@
     border: 2px solid $error;
     transition: all 0.3s linear;
 
-    .input__icon--email line,
-    .input__icon--email path {
+    & + .input__icon--email {
       stroke: $error;
+    }
+
+    & + .input__icon--phone {
+      color: $error;
     }
   }
 
@@ -62,5 +64,24 @@
 
 .input__icon {
   position: absolute;
-  right: 20px;
+  right: 16px;
+
+  &--email {
+    stroke: $darken-2-color;
+  }
+
+  &--phone {
+    right: 13px;
+    color: $darken-color;
+  }
+
+  @media (min-width: $tablet) {
+    &--email {
+      right: 19px;
+    }
+
+    &--phone {
+      right: 18px;
+    }
+  }
 }

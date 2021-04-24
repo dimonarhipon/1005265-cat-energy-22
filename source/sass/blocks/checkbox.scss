@@ -23,14 +23,20 @@
 
 .checkbox__point {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 1px solid $grey;
-  margin-right: 19px;
+  margin-right: 16px;
   box-sizing: border-box;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.7s linear;
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
 }
 
 .checkbox__input:checked + .checkbox__name .checkbox__point::after {
