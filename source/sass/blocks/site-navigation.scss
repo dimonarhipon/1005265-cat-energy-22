@@ -1,3 +1,11 @@
+.site-navigation {
+  &--dark-color {
+    .site-navigation__link {
+      color: $darken-3-color;
+    }
+  }
+}
+
 .site-navigation__list {
   @include list;
 
@@ -12,7 +20,7 @@
     margin-right: 36px;
 
     &--current {
-      padding-bottom: 10px;
+      padding-bottom: 6px;
       border-bottom: 2px solid $base-color;
     }
 
@@ -26,10 +34,6 @@
 
     &--white {
       border-color: $lighten-color;
-    }
-
-    &--darken-color {
-      border-color: $base-color;
     }
 
     &--current {
@@ -72,9 +76,5 @@
     @include text-uppercase(20px, 30px);
 
     color: $lighten-color;
-
-    &--dark-color {
-      color: $darken-3-color;
-    }
   }
 }

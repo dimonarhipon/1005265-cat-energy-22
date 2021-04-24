@@ -52,6 +52,10 @@
 .page-header__menu {
   margin-bottom: 0;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 5px;
+  }
+
   @media (min-width: $desktop) {
     margin-bottom: 9px;
   }

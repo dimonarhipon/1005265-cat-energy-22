@@ -9,13 +9,13 @@
 
 
   @media (min-width: $tablet) {
-    margin-left: 27px;
+    margin-left: 25px;
     padding-top: 0;
     padding-bottom: 0;
   }
 
   @media (min-width: $desktop) {
-    margin-left: 51px;
+    margin-bottom: 5px;
   }
 }
 
@@ -25,6 +25,10 @@
   }
 
   @media (min-width: $tablet) {
+    &:first-child {
+      margin-right: 26px;
+    }
+
     &:not(:last-child) {
       margin-right: 22px;
     }

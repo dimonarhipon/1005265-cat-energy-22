@@ -26,8 +26,8 @@
   @media (min-width: $tablet) {
     max-width: 428px;
     height: 6px;
-    margin-left: 20px;
-    margin-right: 21px;
+    margin-left: 22px;
+    margin-right: 23px;
     background-color: $grey-6;
 
     &::after {
@@ -37,31 +37,33 @@
 }
 
 .range__pin {
-  position: absolute;
-  top: 50%;
-  left: 50.5%;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid $grey-6;
-  background-color: $lighten-color;
-  cursor: pointer;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
-  transition: 0.3s;
-
-  &::after {
+  @media (min-width: $tablet) {
     position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    margin: auto;
+    top: 50%;
+    left: 50.5%;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background-color: $base-color;
+    border: 1px solid $grey-6;
+    background-color: $lighten-color;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    transition: 0.3s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $base-color;
+    }
   }
 }
 

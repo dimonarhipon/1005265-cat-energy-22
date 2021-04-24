@@ -18,14 +18,20 @@
 
 .radio__point {
   position: relative;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1px solid $grey;
-  margin-right: 19px;
+  margin-right: 15px;
   box-sizing: border-box;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+    margin-right: 21px;
+  }
 }
 
 .radio__input:checked + .radio__name .radio__point::after {
