@@ -7,15 +7,20 @@
 
     margin-bottom: 76px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 82px;
+  }
 }
 
 .addition__wrapper {
-  margin-top: 36px;
+  margin-top: 33px;
   margin-left: 20px;
   margin-right: 20px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-bottom: 76px;
     margin-left: 0;
     margin-right: 0;
   }
@@ -43,7 +48,7 @@
 }
 
 .addition__card {
-  padding-top: 13px;
+  padding-top: 9px;
   padding-bottom: 18px;
   border-top: 1px solid $grey;
 
@@ -54,8 +59,9 @@
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 23px auto;
+    grid-template-rows: 22px auto;
     grid-row-gap: 23px;
+    align-items: end;
 
     padding-top: 25px;
     padding-left: 38px;
@@ -165,6 +171,11 @@
   @include text-uppercase(16px, 16px, $darken-2-color);
 
   text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .addition__visual {
@@ -191,10 +202,12 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     min-height: 200px;
     padding-left: 78px;
+    padding-right: 54px;
+    padding-top: 37px;
     background-image: url("../../img/addition-bg-tablet.jpg");
     background-size: 100% auto;
 
@@ -206,9 +219,12 @@
   @media (min-width: $desktop) {
     flex-direction: column;
     align-items: center;
-    width: 280px;
+    flex-shrink: 0;
+    width: 245px;
     min-height: 289px;
     padding: 41px;
+    padding-bottom: 46px;
+    padding-top: 57px;
     box-sizing: border-box;
     background-image: url("../../img/addition-bg.jpg");
     background-position: left 0;
@@ -232,11 +248,11 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    margin-top: 0;
     max-width: 165px;
-    text-align: left;
+    margin-top: 5px;
     margin-left: auto;
     margin-right: 66px;
+    text-align: left;
     font-size: 16px;
     line-height: 20px;
   }
@@ -255,7 +271,7 @@
 
   @media (min-width: $tablet) {
     grid-column: 1 / -1;
-    padding: 6px 26px;
+    padding: 10px 26px;
   }
 
   @media (min-width: $desktop) {

@@ -3,9 +3,25 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  padding-top: 19px;
+  padding-top: 18px;
   padding-bottom: 25px;
   border-top: 1px solid $grey-5;
+
+  &--1 {
+    padding-top: 17px;
+  }
+
+  &--3 .card__image {
+    margin-top: 28px;
+  }
+
+  &--5 .card__image {
+    margin-top: 31px;
+  }
+
+  &--7 .card__image {
+    margin-top: 24px;
+  }
 
   &:last-child {
     border-bottom: 1px solid $grey-5;
@@ -13,7 +29,7 @@
 
   &--load {
     position: relative;
-    padding-top: 78px;
+    padding-top: 77px;
   }
 
   &--load::before {
@@ -29,7 +45,7 @@
   &--load::after {
     position: absolute;
     content: "";
-    top: 39px;
+    top: 38px;
     left: 50%;
     width: 30px;
     height: 2px;
@@ -43,13 +59,30 @@
 
     width: 324px;
     min-height: 430px;
-    padding-left: 36px;
+    padding-left: 39px;
     padding-right: 36px;
     padding-bottom: 40px;
     box-sizing: border-box;
     background-color: $base-card;
 
+    &--3 .card__image {
+      margin-top: 0;
+    }
+
+    &--5 .card__image {
+      margin-top: 0;
+    }
+
+    &--7 {
+      padding-bottom: 37px;
+    }
+
+    &--7 .card__image {
+      margin-top: 0;
+    }
+
     &:last-child {
+      padding-bottom: 35px;
       border: 1px solid $grey-5;
       background-color: $lighten-color;
     }
@@ -60,13 +93,20 @@
     }
 
     &--load::after {
-      top: 80px;
+      top: 84px;
       width: 60px;
     }
   }
 
   @media (min-width: $desktop) {
     width: 245px;
+    padding-left: 40px;
+    padding-right: 37px;
+
+    &:last-child {
+      padding-bottom: 35px;
+      padding-left: 35px;
+    }
   }
 }
 
@@ -108,23 +148,33 @@
       top: -90px;
     }
   }
+
+  @media (min-width: $desktop) {
+    top: -71px;
+
+    &--big {
+      top: -100px;
+    }
+  }
 }
 
 .card__content {
   width: 50%;
   margin-top: auto;
-  margin-bottom: 33px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet) {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 
 .card__title {
-  @include text-uppercase(16px, 20px, #111111);
+  @include text-uppercase(16px, 20px, $darken-3-color);
 
   max-width: 80px;
   margin-top: 0;
+  margin-bottom: 15px;
   text-align: left;
 
   &--load {
@@ -136,10 +186,22 @@
   }
 
   @media (min-width: $tablet) {
+    @include text-uppercase(20px, 22px, $darken-3-color);
+
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 21px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 12px;
+    margin-bottom: 25px;
+
+    &--load {
+      margin-bottom: 22px;
+    }
   }
 }
 
@@ -168,6 +230,13 @@
     margin-right: auto;
     text-align: center;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+
+    max-width: 170px;
+  }
 }
 
 .card__button {
@@ -195,10 +264,12 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 9.5px 26px;
+    width: 248px;
+    padding: 10px 26px;
   }
 
   @media (min-width: $desktop) {
+    width: 100%;
     padding: 10px 26px;
   }
 }
@@ -207,6 +278,6 @@
   width: 100%;
 
   @media (min-width: $tablet) {
-    padding-top: 161px;
+    padding-top: 86px;
   }
 }
