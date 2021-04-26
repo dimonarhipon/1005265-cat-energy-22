@@ -22,7 +22,11 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([autoprefixer(), csso()]))
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -60,7 +64,7 @@ const optimizeImages = () => {
   return gulp.src("source/img/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
@@ -95,8 +99,8 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff,woff2}",
-    "source/*ico",
-    "source/*.json",
+    "source/assets/*ico",
+    "source/assets*.json",
     "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
@@ -139,7 +143,7 @@ exports.default = gulp.series(styles, server, watcher);
 const build = gulp.series(
   clean,
   copy,
-  optimizeImages,
+  copyImages,
   gulp.parallel(
     styles,
     html,
@@ -156,7 +160,7 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   gulp.parallel(
     styles,
     html,
