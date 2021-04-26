@@ -24,6 +24,11 @@ const styles = () => {
     .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
+      autoprefixer(),
       csso()
     ]))
     .pipe(rename("style.min.css"))
@@ -100,7 +105,7 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/assets/*ico",
-    "source/assets*.json",
+    "source/assets/*.json",
     "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
@@ -143,7 +148,7 @@ exports.default = gulp.series(styles, server, watcher);
 const build = gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   gulp.parallel(
     styles,
     html,
@@ -158,17 +163,7 @@ exports.build = build;
 // Default
 
 exports.default = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
+    build,
     server,
     watcher
-  ));
+  );
