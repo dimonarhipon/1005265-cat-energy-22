@@ -5,17 +5,28 @@
     top: 19px;
     right: 19px;
   }
+
+  &--closed .menu__navigation {
+    height: auto;
+    overflow: visible;
+    transition: all 0.5s linear;
+  }
 }
 
 .menu__control {
   position: absolute;
   top: 19px;
   right: 20px;
+  display: flex;
   width: 26px;
   height: 26px;
   border: none;
   padding: 0;
   background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -23,8 +34,10 @@
 }
 
 .menu__close {
+  display: none;
   width: 18px;
   height: 18px;
+  margin: auto;
 
   &.active {
     display: block;
@@ -35,8 +48,15 @@
   display: none;
   width: 24px;
   height: 16px;
+  margin: auto;
 
   &.active {
     display: block;
   }
+}
+
+.menu__navigation {
+  height: 1px;
+  overflow: hidden;
+  transition: all 0.5s linear;
 }

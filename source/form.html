@@ -33,14 +33,11 @@
 
       <div class="page-header__menu menu menu--closed menu--nojs ">
         <button class="menu__control" type="button" aria-label="Открыть меню">
-          <svg class="menu__close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5"/>
-            <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5"/>
+          <svg class="menu__close active" width="20" height="20" fill="none">
+            <use xlink:href="./img/sprite.svg#icon-close"></use>
           </svg>
-          <svg class="menu__open" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5"/>
-            <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5"/>
-            <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5"/>
+          <svg class="menu__open" width="24" height="18" fill="none">
+            <use xlink:href="./img/sprite.svg#burger"></use>
           </svg>
         </button>
         <nav class="menu__navigation site-navigation site-navigation--dark-color">
@@ -94,6 +91,8 @@
               name="animal-name"
               type="text"
               placeholder="БАРСИК"
+              minlength="2"
+              maxlength="30"
               required
             >
           </p>
@@ -106,8 +105,10 @@
               class="questionnaire__input input"
               id="animal-weight"
               name="animal-weight"
-              type="text"
+              type="number"
               placeholder="7"
+              min="0"
+              max="100"
               required
             >
           </p>
@@ -120,7 +121,9 @@
               class="questionnaire__input input"
               id="animal-years"
               name="animal-years"
-              type="text"
+              type="number"
+              min="0"
+              max="20"
               placeholder="7"
             >
           </p>
@@ -234,6 +237,8 @@
               id="animal-description"
               name="animal-description"
               placeholder="Расскажите обо всех повадках кота"
+              minlength="3"
+              maxlength="500"
               ></textarea>
           </p>
         </fieldset>
@@ -338,6 +343,7 @@
         <h3 class="map__title visually-hidden">
           Расположение компании на карте
         </h3>
+        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5734.978716380201!2d30.31844043976087!3d59.93958588214671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1620109308726!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>
@@ -352,7 +358,7 @@
 
       <ul class="page-footer__socials socials">
         <li class="socials__item">
-          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вкотакте"
+          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"
             target="_blank">
             <svg class="socials__icon socials__icon--vkontakte" width="23" height="16">
               <use xlink:href="./img/sprite.svg#icon-vkontakte"></use>
