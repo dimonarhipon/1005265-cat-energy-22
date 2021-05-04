@@ -49,13 +49,13 @@ const html = () => {
 
 // JS
 
-// const scripts = () => {
-//   return gulp.src("source/js/script.js")
-//     .pipe(terser())
-//     .pipe(gulp.dest("build/js"))
-//     .pipe(sync.stream());
-// }
-// exports.scripts = scripts;
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(terser())
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+exports.scripts = scripts;
 
 // Clean
 
@@ -107,7 +107,6 @@ const copy = (done) => {
     "source/assets/*ico",
     "source/assets/*.json",
     "source/img/**/*.{jpg,png,svg}",
-    "source/js/script.js"
   ], {
     base: "source"
   })
@@ -139,7 +138,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  // gulp.watch("source/js/*.js", gulp.series("scripts"));
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 exports.default = gulp.series(styles, server, watcher);
@@ -153,7 +152,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    // scripts,
+    scripts,
     sprite,
     createWebp
   ),
