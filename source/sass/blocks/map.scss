@@ -25,3 +25,11 @@
     }
   }
 }
+
+.map__frame {
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    height: 400px;
+  }
+}

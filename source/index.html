@@ -31,8 +31,8 @@
       </a>
 
       <div class="page-header__menu menu menu--closed menu--nojs">
-        <button class="menu__control" type="button" aria-label="Открыть меню">
-          <svg class="menu__close" width="20" height="20" fill="none">
+        <button class="menu__control" type="button" aria-label="Открыть меню" aria-controls="menu__navigation">
+          <svg class="menu__close active" width="20" height="20" fill="none">
             <use xlink:href="./img/sprite.svg#icon-close"></use>
           </svg>
           <svg class="menu__open" width="24" height="18" fill="none">
@@ -84,9 +84,9 @@
         </div>
 
         <picture>
-          <source class="intro__image" media="(min-width: 1440px)" srcset="./img/intro-desktop.webp, ./img/intro-desktop@2x.webp 2x">
-          <source class="intro__image" media="(min-width: 768px)" srcset="./img/intro-tablet.webp, ./img/intro-tablet@2x.webp 2x">
-          <source class="intro__image" srcset="./img/intro-mobile.webp, ./img/intro-mobile@2x.webp 2x">
+          <source class="intro__image" media="(min-width: 1440px)" srcset="./img/intro-desktop.webp, ./img/intro-desktop@2x.webp 2x" type="image/webp">
+          <source class="intro__image" media="(min-width: 768px)" srcset="./img/intro-tablet.webp, ./img/intro-tablet@2x.webp 2x" type="image/webp">
+          <source class="intro__image" srcset="./img/intro-mobile.webp, ./img/intro-mobile@2x.webp 2x" type="image/webp">
 
           <source class="intro__image" media="(min-width: 1440px)" srcset="./img/intro-desktop.png, ./img/intro-desktop@2x.png 2x">
           <source class="intro__image" media="(min-width: 768px)" srcset="./img/intro-tablet.png, ./img/intro-tablet@2x.png 2x">
@@ -207,14 +207,14 @@
         <div class="slider">
           <div class="slider__item slider__item--1">
             <picture class="slider__picture">
-              <source class="slider__image slider__image--1" srcset="./img/slide-1.webp, ./img/slide-1@2x.webp 2x">
+              <source class="slider__image slider__image--1" srcset="./img/slide-1.webp, ./img/slide-1@2x.webp 2x" type="image/webp">
               <img class="slider__image slider__image--1" src="./img/slide-1.png" srcset="./img/slide-1@2x.png 2x" width="311" height="232" alt="Упитаный кот до диеты" loading="lazy">
             </picture>
           </div>
 
           <div class="slider__item slider__item--2">
             <picture class="slider__picture">
-              <source class="slider__image slider__image--2" srcset="./img/slide-2.webp, ./img/slide-2@2x.webp 2x">
+              <source class="slider__image slider__image--2" srcset="./img/slide-2.webp, ./img/slide-2@2x.webp 2x" type="image/webp">
               <img class="slider__image slider__image--2" src="./img/slide-2.png" srcset="./img/slide-2@2x.png 2x" width="251" height="240" alt="Худой кот после диеты" loading="lazy">
             </picture>
           </div>
@@ -255,6 +255,7 @@
         <h3 class="map__title visually-hidden">
           Расположение компании на карте
         </h3>
+        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5734.978716380201!2d30.31844043976087!3d59.93958588214671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1620109308726!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>
@@ -269,7 +270,7 @@
 
       <ul class="page-footer__socials socials">
         <li class="socials__item">
-          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вкотакте"
+          <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"
             target="_blank">
             <svg class="socials__icon socials__icon--vkontakte" width="23" height="16">
               <use xlink:href="./img/sprite.svg#icon-vkontakte"></use>
