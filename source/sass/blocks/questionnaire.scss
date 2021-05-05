@@ -27,12 +27,14 @@
   }
 
   @media (min-width: $desktop) {
-    grid-column-gap: 80px;
+    grid-column-gap: 78px;
   }
 }
 
 .questionnaire__wrap-title {
   position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: $tablet) {
     &--additional {
@@ -48,6 +50,7 @@
 .questionnaire__title {
   @include title;
 
+  display: inline-block;
   margin-bottom: 35px;
   padding-right: 20px;
   background-color: $lighten-color;
@@ -66,7 +69,7 @@
   }
 
   &--owner {
-    max-width: 202px;
+    max-width: 184px;
   }
 
   &--message {
@@ -195,7 +198,7 @@
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 80px;
+    grid-column-gap: 76px;
     margin-bottom: 68px;
 
     & .questionnaire__wrap {
@@ -243,7 +246,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 80px;
+    grid-column-gap: 76px;
     margin-bottom: 40px;
   }
 }

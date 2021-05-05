@@ -31,8 +31,8 @@
         </svg>
       </a>
 
-      <div class="page-header__menu menu menu--closed menu--nojs ">
-        <button class="menu__control" type="button" aria-label="Открыть меню">
+      <div class="page-header__menu menu menu--closed menu--nojs">
+        <button class="menu__control" type="button" aria-label="Закрыть меню">
           <svg class="menu__close active" width="20" height="20" fill="none">
             <use xlink:href="./img/sprite.svg#icon-close"></use>
           </svg>
@@ -123,7 +123,7 @@
               name="animal-years"
               type="number"
               min="0"
-              max="20"
+              max="25"
               placeholder="7"
             >
           </p>
@@ -137,6 +137,7 @@
               name="radio-item"
               value="похудение"
               type="radio"
+              checked
             >
 
             <label class="questionnaire__label radio__name" for="reducing">
@@ -177,11 +178,11 @@
         </fieldset>
 
         <fieldset class="questionnaire__owner fieldset">
-          <div class="questionnaire__wrap-title">
-            <legend class="questionnaire__title questionnaire__title--owner">
+          <h3 class="questionnaire__wrap-title">
+            <span class="questionnaire__title questionnaire__title--owner">
               Контактные данные (владельца кота)
-            </legend>
-          </div>
+            </span>
+          </h3>
 
           <p class="questionnaire__wrap">
             <label class="questionnaire__label questionnaire__label--owner" for="owner-name">
@@ -220,11 +221,11 @@
         </fieldset>
 
         <fieldset class="questionnaire__message fieldset">
-          <div class="questionnaire__wrap-title">
-            <legend class="questionnaire__title questionnaire__title--message">
+          <h3 class="questionnaire__wrap-title">
+            <span class="questionnaire__title questionnaire__title--message">
               Комментарий
-            </legend>
-          </div>
+            </span>
+          </h3>
 
           <p class="questionnaire__box">
             <label class="questionnaire__label questionnaire__label--message" for="animal-description">
@@ -244,11 +245,11 @@
         </fieldset>
 
         <fieldset class="questionnaire__additional fieldset">
-          <div class="questionnaire__wrap-title questionnaire__wrap-title--additional">
-            <legend class="questionnaire__title questionnaire__title--additional">
+          <h3 class="questionnaire__wrap-title questionnaire__wrap-title--additional">
+            <span class="questionnaire__title questionnaire__title--additional">
               Дополнительно
-            </legend>
-          </div>
+            </span>
+          </h3>
 
           <p class="questionnaire__wrap questionnaire__wrap--additional checkbox">
             <input
@@ -396,7 +397,8 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

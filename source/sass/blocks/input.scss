@@ -46,6 +46,8 @@
     }
 
     & + .input__icon--phone {
+      // stroke: $error;
+      fill: $error;
       color: $error;
     }
   }

@@ -36,7 +36,8 @@
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/intro-bg-desktop@2x.jpg");
+      background-image: url("../../img/intro-bg-desktop@2x.jpg"),
+        linear-gradient(to right, $lighten-color 50%, $base-color-darken-2 50%, $base-color-darken-2 100%);
     }
   }
 }
