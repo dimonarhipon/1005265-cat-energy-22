@@ -365,6 +365,61 @@
   }
 }
 
+.questionnaire__input {
+  &:focus + .questionnaire__icon--email {
+    stroke: $base-color;
+  }
+
+  &:focus + .questionnaire__icon--phone {
+    color: $base-color;
+  }
+
+  &:focus,
+  &:active {
+    padding: 12px 14px;
+    border: 2px solid $text-color;
+  }
+
+  &--error {
+    padding: 12px 14px;
+    border: 2px solid $error;
+    transition: all 0.3s linear;
+
+    & + .questionnaire__icon--email {
+      stroke: $error;
+    }
+
+    & + .questionnaire__icon--phone {
+      fill: $error;
+      color: $error;
+    }
+  }
+}
+
+.questionnaire__icon {
+  position: absolute;
+  right: 16px;
+
+  &--email {
+    stroke: $darken-2-color;
+  }
+
+  &--phone {
+    right: 13px;
+    color: $darken-color;
+  }
+
+  @media (min-width: $tablet) {
+    &--email {
+      right: 19px;
+    }
+
+    &--phone {
+      right: 18px;
+    }
+  }
+}
+
 .questionnaire__textaria {
   @include text-uppercase;
 
@@ -436,3 +491,5 @@
     margin-left: 0;
   }
 }
+
+

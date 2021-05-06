@@ -11,15 +11,15 @@
 
 .slider__item {
   display: flex;
-  max-width: 677px;
-  width: 100%;
   margin-bottom: 24px;
+  margin-right: 9px;
 
   &--2 {
     display: none;
   }
 
   @media (min-width: $tablet) {
+    margin-right: 0;
     margin-bottom: 4px;
   }
 
@@ -63,7 +63,7 @@
   }
 
   @media (min-width: $desktop) {
-    max-width: 585px;
+    max-width: 570px;
     margin-left: auto;
   }
 }
@@ -90,7 +90,6 @@
     border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
   }
 
-
   &:focus {
     outline: none;
   }
@@ -102,7 +101,7 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    border-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     transition: all 0.7s linear;
   }
 

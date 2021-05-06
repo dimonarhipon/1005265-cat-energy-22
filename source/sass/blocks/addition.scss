@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 82px;
+    margin-bottom: 86px;
   }
 }
 
@@ -81,7 +81,7 @@
     align-items: center;
     width: 100%;
     padding-top: 15px;
-    padding-bottom: 17px;
+    padding-bottom: 16px;
     padding-left: 0;
     padding-right: 0;
     border-left: none;
@@ -187,6 +187,7 @@
   width: 280px;
   box-sizing: border-box;
 
+  margin: 0 auto;
   padding: 58px;
   padding-bottom: 43px;
 
@@ -226,12 +227,12 @@
     padding-bottom: 46px;
     padding-top: 57px;
     box-sizing: border-box;
-    background-image: url("../../img/addition-bg.jpg");
+    background-image: url("../../img/addition-bg-desktop.jpg");
     background-position: left 0;
     background-size: 100% 100%;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/addition-bg@2x.jpg");
+      background-image: url("../../img/addition-bg-desktop@2x.jpg");
     }
   }
 }

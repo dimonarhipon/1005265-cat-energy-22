@@ -38,22 +38,21 @@ const sendForm = (item) => {
 };
 
 const formHandler = (item) => {
-  validation(item);
+  sendForm(item);
 }
 
 const lackValueInput = (element) => {
   if (element.validity.valueMissing) {
     element.setCustomValidity("Нужно заполнить поле");
-    element.classList.add("input--error");
+    element.classList.add("questionnaire__input--error");
   } else {
-    element.classList.remove("input--error");
+    element.classList.remove("questionnaire__input--error");
     element.setCustomValidity('');
   }
 }
 
 const validation = (item) => {
   const inputs = item.querySelectorAll(".input");
-
   inputs.forEach((element) => {
     element.addEventListener("invalid", () => {
       lackValueInput(element);

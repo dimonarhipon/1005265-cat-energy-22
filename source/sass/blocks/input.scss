@@ -22,36 +22,6 @@
     outline: none;
   }
 
-  &:focus + .input__icon--email {
-    stroke: $base-color;
-  }
-
-  &:focus + .input__icon--phone {
-    color: $base-color;
-  }
-
-  &:focus,
-  &:active {
-    padding: 12px 14px;
-    border: 2px solid $text-color;
-  }
-
-  &--error {
-    padding: 12px 14px;
-    border: 2px solid $error;
-    transition: all 0.3s linear;
-
-    & + .input__icon--email {
-      stroke: $error;
-    }
-
-    & + .input__icon--phone {
-      // stroke: $error;
-      fill: $error;
-      color: $error;
-    }
-  }
-
   @media (min-width: $tablet) {
     padding: 10px 19px;
     font-size: 20px;
@@ -60,30 +30,6 @@
     &:focus,
     &:active {
       padding: 9px 18px;
-    }
-  }
-}
-
-.input__icon {
-  position: absolute;
-  right: 16px;
-
-  &--email {
-    stroke: $darken-2-color;
-  }
-
-  &--phone {
-    right: 13px;
-    color: $darken-color;
-  }
-
-  @media (min-width: $tablet) {
-    &--email {
-      right: 19px;
-    }
-
-    &--phone {
-      right: 18px;
     }
   }
 }
