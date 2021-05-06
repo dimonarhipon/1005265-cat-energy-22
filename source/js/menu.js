@@ -18,7 +18,8 @@ const mobileMenu = () => {
   };
 
   menu.classList.remove("menu--nojs");
-  menuToggle();
+  menu.classList.remove("menu--closed");
+  iconClose.classList.add("active");
 
   menuControl.addEventListener("click", menuToggle);
 };

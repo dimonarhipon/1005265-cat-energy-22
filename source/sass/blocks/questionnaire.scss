@@ -374,14 +374,8 @@
     color: $base-color;
   }
 
-  &:focus,
-  &:active {
-    padding: 12px 14px;
-    border: 2px solid $text-color;
-  }
-
   &--error {
-    padding: 12px 14px;
+    padding: 9px 18px;
     border: 2px solid $error;
     transition: all 0.3s linear;
 
