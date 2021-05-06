@@ -36,7 +36,8 @@
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/intro-bg-desktop@2x.jpg");
+      background-image: url("../../img/intro-bg-desktop@2x.jpg"),
+        linear-gradient(to right, $lighten-color 50%, $base-color-darken-2 50%, $base-color-darken-2 100%);
     }
   }
 }
@@ -90,6 +91,11 @@
     text-align: left;
     color: $darken-color;
   }
+
+
+  @media (min-width: $desktop) {
+    margin-bottom: 51px;
+  }
 }
 
 .intro__button {
@@ -133,7 +139,7 @@
   }
 
   @media (min-width: $desktop) {
-    top: 0;
+    top: 5px;
     left: 58%;
 
     width: 559px;

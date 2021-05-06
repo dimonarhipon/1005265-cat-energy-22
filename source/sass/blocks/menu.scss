@@ -11,6 +11,16 @@
     overflow: visible;
     transition: all 0.5s linear;
   }
+
+  &--nojs .menu__open {
+    display: none;
+  }
+
+  &--nojs .menu__navigation {
+    height: auto;
+    overflow: visible;
+    transition: all 0.5s linear;
+  }
 }
 
 .menu__control {
@@ -56,7 +66,13 @@
 }
 
 .menu__navigation {
-  height: 1px;
+  height: 0;
   overflow: hidden;
   transition: all 0.5s linear;
+
+  @media (min-width: $tablet) {
+    height: auto;
+    overflow: visible;
+    transition: all 0.5s linear;
+  }
 }
