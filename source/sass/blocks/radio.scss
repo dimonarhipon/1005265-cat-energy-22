@@ -35,6 +35,9 @@
 }
 
 .radio__input {
+  position: absolute;
+  appearance: none;
+
   &:checked + .radio__name .radio__point::after {
     position: absolute;
     content: "";
@@ -47,6 +50,10 @@
     border-color: $base-color;
     background-color: $base-color;
     cursor: pointer;
+  }
+
+  &:focus + .radio__name {
+    outline: 2px solid $darken-color;
   }
 
   &[disabled] + .radio__name {

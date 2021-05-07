@@ -83,6 +83,22 @@
 }
 
 .range__input {
-  display: none;
-  appearance: none;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+
+  &:hover + .range__pin {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  }
+
+  &:focus + .range__pin {
+    border-color: $base-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  }
+
+  &:active + .range__pin {
+    border-color: $base-color;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
 }

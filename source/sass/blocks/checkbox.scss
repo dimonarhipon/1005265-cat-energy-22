@@ -40,6 +40,9 @@
 }
 
 .checkbox__input {
+  position: absolute;
+  appearance: none;
+
   &:checked + .checkbox__name .checkbox__point::after {
     position: absolute;
     content: "";
@@ -54,6 +57,10 @@
     background-position: center;
     cursor: pointer;
     transition: all 0.7s linear;
+  }
+
+  &:focus + .checkbox__name {
+    outline: 2px solid $darken-color;
   }
 
   &[disabled] + .checkbox__name {

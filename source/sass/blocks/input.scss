@@ -28,6 +28,16 @@
     border: 2px solid $text-color;
   }
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
+
   @media (min-width: $tablet) {
     padding: 10px 19px;
     font-size: 20px;
