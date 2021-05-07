@@ -15,8 +15,7 @@
   background-color: $base-color;
   transition: all 0.7s linear;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $base-color-darken;
     transition: all 0.7s linear;
     cursor: pointer;
@@ -24,6 +23,12 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:focus-visible {
+    background-color: $base-color-darken;
+    outline: 2px solid $darken-color;
+    transition: all 0.7s linear;
   }
 
   &:active {
