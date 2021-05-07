@@ -6,7 +6,6 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
-const svgstrore = require("gulp-svgstore");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -66,11 +65,10 @@ const clean = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/*.{png,jpg,svg}")
+  return gulp.src("source/img/*.{png,jpg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
-      imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
 }
@@ -88,18 +86,6 @@ const createWebp = () => {
     .pipe(gulp.dest("build/img"))
 }
 exports.createWebp = createWebp;
-
-// sprite
-
-const sprite = () => {
-  return gulp.src("source/img/*.svg")
-    .pipe(svgstrore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
@@ -153,7 +139,6 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-    sprite,
     createWebp
   ),
 );

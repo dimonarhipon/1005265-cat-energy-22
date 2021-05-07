@@ -37,8 +37,9 @@ const sendForm = (item) => {
     });
 };
 
-const formHandler = (item) => {
-  sendForm(item);
+const formHandler = (evt) => {
+  evt.preventDefault();
+  sendForm(evt.target);
 }
 
 const lackValueInput = (element) => {
@@ -63,10 +64,7 @@ const validation = (item) => {
 const form = () => {
   forms.forEach((item) => {
     validation(item);
-    item.addEventListener("submit", (evt) => {
-      evt.preventDefault();
-      formHandler(item);
-    });
+    item.addEventListener("submit", formHandler);
   });
 }
 
